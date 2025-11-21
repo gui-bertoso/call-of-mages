@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="BookData" load_steps=4 format=3 uid="uid://bw2onhcogxqeu"]
+
+[ext_resource type="Texture2D" uid="uid://bl6wn5wyjykao" path="res://book.png" id="1_2hjcx"]
+[ext_resource type="Script" uid="uid://doaoovtm8acr" path="res://books_datas/book_data.gd" id="1_5bl7c"]
+[ext_resource type="PackedScene" uid="uid://1virtq3mjnmu" path="res://books/book_of_losers.tscn" id="2_uo0bn"]
+
+[resource]
+script = ExtResource("1_5bl7c")
+book_name = "Book Of Losers"
+book_description = "A book with a small shiny"
+book_image = ExtResource("1_2hjcx")
+book_scene = ExtResource("2_uo0bn")

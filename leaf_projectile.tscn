@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://hld87dwg5ntc"]
+
+[ext_resource type="PackedScene" uid="uid://b18onlwam3qiq" path="res://projectile.tscn" id="1_4taso"]
+[ext_resource type="Texture2D" uid="uid://1ivch5tq0xda" path="res://leaf_shot.png" id="2_4taso"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldd7w"]
+atlas = ExtResource("2_4taso")
+region = Rect2(0, 0, 15, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gg7lb"]
+atlas = ExtResource("2_4taso")
+region = Rect2(15, 0, 15, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45bhr"]
+atlas = ExtResource("2_4taso")
+region = Rect2(30, 0, 15, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bh0lh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldd7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gg7lb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45bhr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q666c"]
+size = Vector2(17, 7)
+
+[node name="LeafProjectile" unique_id=46542461 instance=ExtResource("1_4taso")]
+speed = 180
+damage = 2
+
+[node name="Sprite2D" parent="." index="0" unique_id=1090903887]
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.26880896
+
+[node name="Area2D" parent="." index="1" unique_id=1352675923]
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="Area2D" index="0" unique_id=736397683]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_q666c")
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="3" unique_id=1173005029]
+position = Vector2(-23, 0)
+target_position = Vector2(37, 0)
+collision_mask = 8
+collide_with_areas = true
