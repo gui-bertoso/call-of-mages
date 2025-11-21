@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3dktca6b0uva"]
+
+[ext_resource type="PackedScene" uid="uid://me21a63qese1" path="res://books/book/book.tscn" id="1_kdn1k"]
+[ext_resource type="Texture2D" uid="uid://bl6wn5wyjykao" path="res://book.png" id="2_7dxkl"]
+[ext_resource type="Texture2D" uid="uid://cgpr7ydqa765p" path="res://light.png" id="3_0cqyw"]
+
+[node name="JerryBook" unique_id=538403219 instance=ExtResource("1_kdn1k")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=480368815]
+texture = ExtResource("2_7dxkl")
+
+[node name="PointLight2D" type="PointLight2D" parent="." index="1" unique_id=1571716012]
+texture = ExtResource("3_0cqyw")
+
+[node name="RayCast2D" parent="." index="2" unique_id=982601444]
+target_position = Vector2(13, 0)
+collision_mask = 0

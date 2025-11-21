@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm0ypugv4foyd"]
+
+[ext_resource type="Script" uid="uid://ddikrxocdd82s" path="res://physic_item.gd" id="1_p6gtd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p6gtd"]
+radius = 16.124516
+
+[node name="PhysicItem" type="Area2D" unique_id=875009779]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_p6gtd")
+
+[node name="Collision" type="CollisionShape2D" parent="." unique_id=556846688]
+position = Vector2(0, 33)
+shape = SubResource("CircleShape2D_p6gtd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1517998543]
+
+[node name="Label" type="Label" parent="." unique_id=269988457]
+visible = false
+z_index = 1
+offset_left = -45.0
+offset_top = -44.0
+offset_right = 45.0
+offset_bottom = -30.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "book name"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label2" type="Label" parent="." unique_id=1532094357]
+visible = false
+z_index = 1
+offset_left = -45.0
+offset_top = -34.0
+offset_right = 45.0
+offset_bottom = -12.0
+theme_override_constants/line_spacing = -4
+theme_override_font_sizes/font_size = 8
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+uppercase = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

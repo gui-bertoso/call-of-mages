@@ -1,0 +1,18 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bal7jd2xoct6u"]
+
+[sub_resource type="Shader" id="Shader_ut0pw"]
+code = "shader_type canvas_item;
+uniform vec4 flash_color: source_color = vec4(1.0, 1.0, 1.0, 1.0);
+uniform float flash_on = 0.0;
+
+void fragment() {
+	vec4 original_color = texture(TEXTURE, UV);
+	vec3 flashed_rgb = mix(original_color.rgb, flash_color.rgb, flash_on);
+	float final_alpha = original_color.a;
+	COLOR = vec4(flashed_rgb, final_alpha);
+}"
+
+[resource]
+shader = SubResource("Shader_ut0pw")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_on = 0.0
