@@ -1,50 +1,50 @@
 [gd_scene load_steps=5 format=3 uid="uid://ck2kchfngbda"]
 
-[ext_resource type="Texture2D" uid="uid://ci0rnlwgg53vd" path="res://assets/levels/sprite3.png" id="1_pewv0"]
-[ext_resource type="PackedScene" uid="uid://4fjo6cw3dkkv" path="res://store/store.tscn" id="2_apxv1"]
-[ext_resource type="PackedScene" uid="uid://dvj7r5lan43fn" path="res://character/character.tscn" id="3_kta21"]
-[ext_resource type="PackedScene" uid="uid://c7vxd57kxtseg" path="res://hud/hud.tscn" id="4_apxv1"]
+[ext_resource type="Texture2D" uid="uid://ci0rnlwgg53vd" path="res://assets/levels/sprite3.png" id="1_mxpld"]
+[ext_resource type="PackedScene" uid="uid://4fjo6cw3dkkv" path="res://store/store.tscn" id="2_qkt71"]
+[ext_resource type="PackedScene" uid="uid://dvj7r5lan43fn" path="res://character/character.tscn" id="3_gbpn1"]
+[ext_resource type="PackedScene" uid="uid://c7vxd57kxtseg" path="res://hud/hud.tscn" id="4_yh33p"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Sprite3" type="Sprite2D" parent="."]
 position = Vector2(-154.99998, -220.99998)
 scale = Vector2(1.39375, 1.396875)
-texture = ExtResource("1_pewv0")
+texture = ExtResource("1_mxpld")
 
 [node name="Sprite4" type="Sprite2D" parent="."]
 position = Vector2(142.99998, -183)
 scale = Vector2(1.39375, 1.396875)
-texture = ExtResource("1_pewv0")
+texture = ExtResource("1_mxpld")
 
 [node name="Sprite5" type="Sprite2D" parent="."]
 position = Vector2(-118.000015, 15)
 rotation = 2.25886
 scale = Vector2(1.39375, 1.396875)
-texture = ExtResource("1_pewv0")
+texture = ExtResource("1_mxpld")
 
 [node name="Sprite6" type="Sprite2D" parent="."]
 position = Vector2(142.99998, 36.999996)
 rotation = 0.92874074
 scale = Vector2(1.39375, 1.396875)
-texture = ExtResource("1_pewv0")
+texture = ExtResource("1_mxpld")
 
 [node name="Sprite7" type="Sprite2D" parent="."]
 position = Vector2(47.999985, 14.999996)
 rotation = 0.92874074
 scale = Vector2(1.39375, 1.396875)
-texture = ExtResource("1_pewv0")
+texture = ExtResource("1_mxpld")
 
 [node name="Sprite8" type="Sprite2D" parent="."]
 position = Vector2(67, -220)
 rotation = 0.92874074
 scale = Vector2(1.39375, 1.396875)
-texture = ExtResource("1_pewv0")
+texture = ExtResource("1_mxpld")
 
-[node name="Store" parent="." instance=ExtResource("2_apxv1")]
+[node name="Store" parent="." instance=ExtResource("2_qkt71")]
 position = Vector2(109, -222)
 
-[node name="Character" parent="." instance=ExtResource("3_kta21")]
+[node name="Character" parent="." instance=ExtResource("3_gbpn1")]
 position = Vector2(-48, -65)
 
-[node name="HUD" parent="." instance=ExtResource("4_apxv1")]
+[node name="HUD" parent="." instance=ExtResource("4_yh33p")]
