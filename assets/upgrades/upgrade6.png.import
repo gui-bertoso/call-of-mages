@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://db8x418mlaxe0"
-path="res://.godot/imported/red_roll.png-14201653e419a7a1a9818e2afb51f6ea.ctex"
+uid="uid://bci2g6yuqgla0"
+path="res://.godot/imported/upgrade6.png-3fe8021b1901ce4c9564901cac546009.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/upgrades/red_roll.png"
-dest_files=["res://.godot/imported/red_roll.png-14201653e419a7a1a9818e2afb51f6ea.ctex"]
+source_file="res://assets/upgrades/upgrade6.png"
+dest_files=["res://.godot/imported/upgrade6.png-3fe8021b1901ce4c9564901cac546009.ctex"]
 
 [params]
 

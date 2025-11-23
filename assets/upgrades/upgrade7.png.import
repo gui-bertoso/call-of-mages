@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4agjvd3uasqo"
-path="res://.godot/imported/gold_triangle.png-0a38a2eec191b8b9debc8864eb4769f3.ctex"
+uid="uid://db8x418mlaxe0"
+path="res://.godot/imported/upgrade7.png-28d37ae0d5a27ae0b4fb86e00cae13e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/upgrades/gold_triangle.png"
-dest_files=["res://.godot/imported/gold_triangle.png-0a38a2eec191b8b9debc8864eb4769f3.ctex"]
+source_file="res://assets/upgrades/upgrade7.png"
+dest_files=["res://.godot/imported/upgrade7.png-28d37ae0d5a27ae0b4fb86e00cae13e3.ctex"]
 
 [params]
 

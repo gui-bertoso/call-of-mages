@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwvd6ofd1ax5q"
-path="res://.godot/imported/suspicius_plate_1.png-c7fe385d75c5abaa5019bf03b69a3dae.ctex"
+uid="uid://bhsmo3is58kij"
+path="res://.godot/imported/upgrade14.png-1895191c04dd0d18a38501fd333b0035.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/upgrades/suspicius_plate_1.png"
-dest_files=["res://.godot/imported/suspicius_plate_1.png-c7fe385d75c5abaa5019bf03b69a3dae.ctex"]
+source_file="res://assets/upgrades/upgrade14.png"
+dest_files=["res://.godot/imported/upgrade14.png-1895191c04dd0d18a38501fd333b0035.ctex"]
 
 [params]
 

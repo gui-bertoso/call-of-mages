@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chxlo73qsljhc"
-path="res://.godot/imported/vortice_overdose.png-f067285e491f4178ac6acdf9f01c6887.ctex"
+uid="uid://cw127wkldq6jq"
+path="res://.godot/imported/upgrade10.png-b3d06e7960899a94dc51069eb2552436.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/upgrades/vortice_overdose.png"
-dest_files=["res://.godot/imported/vortice_overdose.png-f067285e491f4178ac6acdf9f01c6887.ctex"]
+source_file="res://assets/upgrades/upgrade10.png"
+dest_files=["res://.godot/imported/upgrade10.png-b3d06e7960899a94dc51069eb2552436.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhsmo3is58kij"
-path="res://.godot/imported/white_roll.png-b67b21913b4fafee4703f92591cadc0e.ctex"
+uid="uid://chj1oex2t8xjb"
+path="res://.godot/imported/upgrade0.png-ac5f2980c60f5361db7d4d17d011bb67.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/upgrades/white_roll.png"
-dest_files=["res://.godot/imported/white_roll.png-b67b21913b4fafee4703f92591cadc0e.ctex"]
+source_file="res://assets/upgrades/upgrade0.png"
+dest_files=["res://.godot/imported/upgrade0.png-ac5f2980c60f5361db7d4d17d011bb67.ctex"]
 
 [params]
 

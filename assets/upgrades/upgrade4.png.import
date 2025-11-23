@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bci2g6yuqgla0"
-path="res://.godot/imported/purple_amuleto.png-3cf515335339728a66abffbadbd9103f.ctex"
+uid="uid://d4agjvd3uasqo"
+path="res://.godot/imported/upgrade4.png-e7996803e19014495f879a3a503fbbcd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/upgrades/purple_amuleto.png"
-dest_files=["res://.godot/imported/purple_amuleto.png-3cf515335339728a66abffbadbd9103f.ctex"]
+source_file="res://assets/upgrades/upgrade4.png"
+dest_files=["res://.godot/imported/upgrade4.png-e7996803e19014495f879a3a503fbbcd.ctex"]
 
 [params]
 

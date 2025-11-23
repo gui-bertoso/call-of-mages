@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dcum7tmr5ei7h"
-path="res://.godot/imported/shadow_overdose.png-73e242bb577cabf9481b3167eb458a12.ctex"
+uid="uid://bwvd6ofd1ax5q"
+path="res://.godot/imported/upgrade11.png-20bb54ffa350689d1313abe9435f2e52.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/upgrades/shadow_overdose.png"
-dest_files=["res://.godot/imported/shadow_overdose.png-73e242bb577cabf9481b3167eb458a12.ctex"]
+source_file="res://assets/upgrades/upgrade11.png"
+dest_files=["res://.godot/imported/upgrade11.png-20bb54ffa350689d1313abe9435f2e52.ctex"]
 
 [params]
 
