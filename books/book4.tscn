@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg02mypadx5x1"]
+
+[ext_resource type="PackedScene" uid="uid://me21a63qese1" path="res://books/book/book.tscn" id="1_xqvjl"]
+[ext_resource type="PackedScene" uid="uid://b3s058nuphx82" path="res://projectiles/white_projectile.tscn" id="2_w1dr2"]
+[ext_resource type="Texture2D" uid="uid://npjb5jbdlfws" path="res://assets/books/book4.png" id="3_xqvjl"]
+
+[node name="Book" instance=ExtResource("1_xqvjl")]
+projectile = ExtResource("2_w1dr2")
+
+[node name="GPUParticles2D" parent="." index="0"]
+position = Vector2(7, 0)
+lifetime = 0.06999999999999999
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_xqvjl")

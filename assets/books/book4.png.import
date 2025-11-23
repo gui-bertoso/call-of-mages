@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc6hdqgl4wd2g"
-path="res://.godot/imported/ice_book.png-26c214fef9498f1eb8803e9b94dba556.ctex"
+uid="uid://npjb5jbdlfws"
+path="res://.godot/imported/book4.png-8320f1d358dd960f242e26175dda9be8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/books/ice_book.png"
-dest_files=["res://.godot/imported/ice_book.png-26c214fef9498f1eb8803e9b94dba556.ctex"]
+source_file="res://assets/books/book4.png"
+dest_files=["res://.godot/imported/book4.png-8320f1d358dd960f242e26175dda9be8.ctex"]
 
 [params]
 

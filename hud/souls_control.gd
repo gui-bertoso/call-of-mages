@@ -8,10 +8,10 @@ func populate_souls():
 	var remaining_souls = souls
 	
 	var layers = [
-		{"min": 30, "div": 6, "texture": load("res://yellow_soul.png")},
-		{"min": 20, "div": 4, "texture": load("res://orange_soul.png")},
-		{"min": 11, "div": 2, "texture": load("res://pink_soul.png")},
-		{"min": 0, "div": 1, "texture": load("res://soul.png")}
+		{"min": 30, "div": 6, "texture": load("res://assets/souls/yellow_soul.png")},
+		{"min": 20, "div": 4, "texture": load("res://assets/souls/orange_soul.png")},
+		{"min": 11, "div": 2, "texture": load("res://assets/souls/pink_soul.png")},
+		{"min": 0, "div": 1, "texture": load("res://assets/souls/soul.png")}
 	]
 	
 	for i in range(layers.size()):

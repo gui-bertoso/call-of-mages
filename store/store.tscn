@@ -7,9 +7,6 @@
 [node name="Store" type="Node2D"]
 script = ExtResource("1_swnu8")
 
-[node name="SellerNPC" parent="." instance=ExtResource("2_v2t5l")]
-metadata/_custom_type_script = "uid://b6fuhfgkv86e"
-
 [node name="StoreBackground" type="Sprite2D" parent="."]
 position = Vector2(1, 66)
 texture = ExtResource("2_wc3r1")
@@ -18,10 +15,22 @@ texture = ExtResource("2_wc3r1")
 position = Vector2(-39, 14)
 
 [node name="Marker2D2" type="Marker2D" parent="StoreBackground"]
-position = Vector2(24, 25)
+position = Vector2(-10, 26)
 
 [node name="Marker2D3" type="Marker2D" parent="StoreBackground"]
-position = Vector2(-11, -11)
+position = Vector2(18, 14)
+
+[node name="Marker2D4" type="Marker2D" parent="StoreBackground"]
+position = Vector2(48, 26)
 
 [node name="Marker2D5" type="Marker2D" parent="StoreBackground"]
-position = Vector2(46, -12)
+position = Vector2(36, -16)
+
+[node name="Marker2D6" type="Marker2D" parent="StoreBackground"]
+position = Vector2(3, -13)
+
+[node name="Marker2D7" type="Marker2D" parent="StoreBackground"]
+position = Vector2(-27, -13)
+
+[node name="SellerNPC" parent="." instance=ExtResource("2_v2t5l")]
+metadata/_custom_type_script = "uid://b6fuhfgkv86e"

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cksp2q6ovi0wu"]
 
 [ext_resource type="Script" uid="uid://df7okou0i8tye" path="res://store_slot/store_slot.gd" id="1_p7etm"]
-[ext_resource type="Texture2D" uid="uid://bl6wn5wyjykao" path="res://assets/books/book.png" id="2_mfurv"]
+[ext_resource type="Texture2D" uid="uid://bl6wn5wyjykao" path="res://assets/books/book1.png" id="2_mfurv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p7etm"]
 radius = 15.132746

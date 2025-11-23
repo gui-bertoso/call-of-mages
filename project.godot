@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CallsOfMages"
-run/main_scene="uid://v1lxemuwtt78"
+run/main_scene="uid://ck2kchfngbda"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
