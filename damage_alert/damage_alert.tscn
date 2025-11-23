@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://cujfgwmjaj7fk"]
+
+[ext_resource type="Script" uid="uid://bnl72qdsvaf1w" path="res://damage_alert/damage_alert.gd" id="1_hmkx0"]
+
+[node name="Label" type="Label" unique_id=1453824772]
+modulate = Color(1, 0, 0, 1)
+offset_right = 33.0
+offset_bottom = 23.0
+text = "-999"
+script = ExtResource("1_hmkx0")
+
+[node name="Timer" type="Timer" parent="." unique_id=986269762]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

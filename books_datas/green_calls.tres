@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="BookData" load_steps=4 format=3 uid="uid://kyxetmmtpqni"]
 
-[ext_resource type="Texture2D" uid="uid://ck7hnyhntghx7" path="res://green_calls.png" id="1_mdb0l"]
+[ext_resource type="Texture2D" uid="uid://ck7hnyhntghx7" path="res://assets/books/green_calls.png" id="1_mdb0l"]
 [ext_resource type="PackedScene" uid="uid://cax8dqyxkq5md" path="res://books/green_calls.tscn" id="2_f4ajg"]
 [ext_resource type="Script" uid="uid://doaoovtm8acr" path="res://books_datas/book_data.gd" id="3_t7vgf"]
 

@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://cksp2q6ovi0wu"]
+
+[ext_resource type="Script" uid="uid://df7okou0i8tye" path="res://store_slot/store_slot.gd" id="1_p7etm"]
+[ext_resource type="Texture2D" uid="uid://bl6wn5wyjykao" path="res://assets/books/book.png" id="2_mfurv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p7etm"]
+radius = 15.132746
+
+[node name="StoreSlot" type="Node2D"]
+script = ExtResource("1_p7etm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mfurv")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 24)
+shape = SubResource("CircleShape2D_p7etm")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = -41.0
+offset_top = -33.0
+offset_right = 51.0
+offset_bottom = -20.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 9
+text = "ITEM_NAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+offset_left = -42.0
+offset_top = -20.0
+offset_right = 53.0
+offset_bottom = -9.0
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 7
+text = "ITEM DESCRIPTION HERE"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

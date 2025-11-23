@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://lk74qe1kkq0a"]
+
+[ext_resource type="PackedScene" uid="uid://bs278cubkkoqn" path="res://npcs/npc_template/npc_template.tscn" id="1_oa8id"]
+[ext_resource type="Script" uid="uid://ds6iysadwrgbv" path="res://npcs/seller_npc/seller_npc.gd" id="2_gi2sl"]
+[ext_resource type="Texture2D" uid="uid://bvbsrkh77ba7i" path="res://assets/NPCS/SellerNPC.png" id="2_smr4o"]
+[ext_resource type="PackedScene" uid="uid://e6od82ao4tiy" path="res://effects/soul_trade/soul_trade_fx.tscn" id="4_514sx"]
+
+[node name="SellerNPC" instance=ExtResource("1_oa8id")]
+script = ExtResource("2_gi2sl")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_smr4o")
+
+[node name="Label" type="Label" parent="." index="1"]
+offset_left = -37.0
+offset_top = -32.0
+offset_right = 41.0
+offset_bottom = -17.0
+theme_override_constants/line_spacing = 0
+theme_override_font_sizes/font_size = 8
+text = "this curt 1"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="SoulTradeFX" parent="." index="2" instance=ExtResource("4_514sx")]
+
+[editable path="SoulTradeFX"]

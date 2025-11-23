@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://4fjo6cw3dkkv"]
+
+[ext_resource type="Script" uid="uid://cyxti3uear3if" path="res://store/store.gd" id="1_swnu8"]
+[ext_resource type="PackedScene" uid="uid://lk74qe1kkq0a" path="res://npcs/seller_npc/seller_npc.tscn" id="2_v2t5l"]
+[ext_resource type="Texture2D" uid="uid://d3gkimf8qierw" path="res://assets/store/tapete.png" id="2_wc3r1"]
+
+[node name="Store" type="Node2D"]
+script = ExtResource("1_swnu8")
+
+[node name="SellerNPC" parent="." instance=ExtResource("2_v2t5l")]
+metadata/_custom_type_script = "uid://b6fuhfgkv86e"
+
+[node name="StoreBackground" type="Sprite2D" parent="."]
+position = Vector2(1, 66)
+texture = ExtResource("2_wc3r1")
+
+[node name="Marker2D" type="Marker2D" parent="StoreBackground"]
+position = Vector2(-39, 14)
+
+[node name="Marker2D2" type="Marker2D" parent="StoreBackground"]
+position = Vector2(24, 25)
+
+[node name="Marker2D3" type="Marker2D" parent="StoreBackground"]
+position = Vector2(-11, -11)
+
+[node name="Marker2D5" type="Marker2D" parent="StoreBackground"]
+position = Vector2(46, -12)
