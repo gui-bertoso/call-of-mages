@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwbyd1wvqyujo"
-path="res://.godot/imported/souls_bottle.png-feefbbd8a412b69db6cd1107c0393dd6.ctex"
+uid="uid://chxlo73qsljhc"
+path="res://.godot/imported/upgrade13.png-bcacbbbcdb8a8f7c0a951f0ed6c325ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/upgrades/souls_bottle.png"
-dest_files=["res://.godot/imported/souls_bottle.png-feefbbd8a412b69db6cd1107c0393dd6.ctex"]
+source_file="res://assets/upgrades/upgrade13.png"
+dest_files=["res://.godot/imported/upgrade13.png-bcacbbbcdb8a8f7c0a951f0ed6c325ff.ctex"]
 
 [params]
 

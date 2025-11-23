@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3w4okqg6fdrf"
-path="res://.godot/imported/blue_roll.png-1b18192a379f2892c1681aa556a9c0d7.ctex"
+uid="uid://cgjt0su1wcywg"
+path="res://.godot/imported/upgrade1.png-f5b30112761d0f10dbd452d737b99746.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/upgrades/blue_roll.png"
-dest_files=["res://.godot/imported/blue_roll.png-1b18192a379f2892c1681aa556a9c0d7.ctex"]
+source_file="res://assets/upgrades/upgrade1.png"
+dest_files=["res://.godot/imported/upgrade1.png-f5b30112761d0f10dbd452d737b99746.ctex"]
 
 [params]
 
