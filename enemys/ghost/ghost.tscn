@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://bhejb7nd430o6"]
+
+[ext_resource type="PackedScene" uid="uid://berokxlx0e7or" path="res://enemys/enemy_template/enemy_template.tscn" id="1_v5pp4"]
+[ext_resource type="Script" path="res://area_2d_2.gd" id="3_obmiq"]
+
+[sub_resource type="Shader" id="Shader_ut0pw"]
+code = "shader_type canvas_item;
+uniform vec4 flash_color: source_color = vec4(1.0, 1.0, 1.0, 1.0);
+uniform float flash_on = 0.0;
+
+void fragment() {
+	vec4 original_color = texture(TEXTURE, UV);
+	vec3 flashed_rgb = mix(original_color.rgb, flash_color.rgb, flash_on);
+	float final_alpha = original_color.a;
+	COLOR = vec4(flashed_rgb, final_alpha);
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6attn"]
+shader = SubResource("Shader_ut0pw")
+shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_on = 0.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_obmiq"]
+load_path = "res://.godot/imported/ghost.png-f343bb4bd35f12f8f631dffe3b7d2891.ctex"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6attn"]
+radius = 7.0
+height = 20.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6attn"]
+radius = 268.42505
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_obmiq"]
+radius = 6.999703
+height = 19.999151
+
+[node name="Ghost" unique_id=1136143948 instance=ExtResource("1_v5pp4")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1438285359]
+material = SubResource("ShaderMaterial_6attn")
+texture = SubResource("CompressedTexture2D_obmiq")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=949062856]
+position = Vector2(0, 10)
+rotation = -1.5931281
+shape = SubResource("CapsuleShape2D_6attn")
+
+[node name="Area2D" parent="." index="2" unique_id=1723013681]
+collision_layer = 8
+
+[node name="CollisionShape2D" parent="Area2D" index="0" unique_id=428585938]
+shape = SubResource("CircleShape2D_6attn")
+
+[node name="Marker2D" parent="." index="3" unique_id=1731830602]
+position = Vector2(-2, -21)
+
+[node name="Area2D2" parent="." index="4" unique_id=1163426105]
+collision_layer = 8
+script = ExtResource("3_obmiq")
+
+[node name="CollisionShape2D" parent="Area2D2" index="0" unique_id=149886654]
+position = Vector2(0, 10)
+rotation = -1.5800092
+shape = SubResource("CapsuleShape2D_obmiq")
+
+[connection signal="area_entered" from="Area2D2" to="." method="_on_area_2d_2_area_entered"]
