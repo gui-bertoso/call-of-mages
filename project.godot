@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Globals="*uid://c0hcgg75mhrb4"
 FadeScreen="*res://fade_screen/fade_screen.tscn"
+QuestsManager="*res://autoload/quests_manager.gd"
 
 [display]
 
@@ -30,6 +31,7 @@ ManaBar=""
 ExpBar=""
 HUD=""
 SoulsContainer=""
+QuestNotifier=""
 
 [input]
 

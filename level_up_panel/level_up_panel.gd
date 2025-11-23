@@ -12,4 +12,5 @@ func _on_move_speed_button_up() -> void:
 
 func _on_max_souls_button_up() -> void:
 	Globals.character.souls += 1
+	QuestsManager.catch_quest_event("current_souls", Globals.character.souls)
 	get_tree().call_group("SoulsContainer", "populate_souls")

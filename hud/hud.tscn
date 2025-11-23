@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://c7vxd57kxtseg"]
+[gd_scene load_steps=9 format=3 uid="uid://c7vxd57kxtseg"]
 
 [ext_resource type="Script" uid="uid://begnmm227qdnk" path="res://hud/hud.gd" id="1_8sq4i"]
 [ext_resource type="Script" uid="uid://cvidgy7tlhifj" path="res://hud/mana_bar.gd" id="1_37p78"]
 [ext_resource type="Script" uid="uid://daycglkhiiru4" path="res://hud/exp_bar.gd" id="2_64ctp"]
+[ext_resource type="PackedScene" uid="uid://dp1b85llbjjoh" path="res://quests_manager/quests_notifier.tscn" id="2_fjv1a"]
 [ext_resource type="PackedScene" uid="uid://d136q6rs2223s" path="res://level_up_panel/level_up_panel.tscn" id="4_640wx"]
 [ext_resource type="Script" uid="uid://clvh8xmwfbsjf" path="res://hud/souls_control.gd" id="5_a2258"]
 
@@ -14,6 +15,8 @@ bg_color = Color(0, 0.5647059, 1, 1)
 
 [node name="HUD" type="CanvasLayer" groups=["HUD"]]
 script = ExtResource("1_8sq4i")
+
+[node name="QuestsNotifier" parent="." instance=ExtResource("2_fjv1a")]
 
 [node name="ProgressBar" type="ProgressBar" parent="." groups=["ManaBar"]]
 anchors_preset = 7

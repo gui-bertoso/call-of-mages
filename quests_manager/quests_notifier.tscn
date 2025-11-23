@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dp1b85llbjjoh"]
+
+[ext_resource type="Script" uid="uid://cgbjity8t4k11" path="res://quests_manager/quests_notifier.gd" id="1_ke428"]
+
+[node name="QuestsNotifier" type="Control" groups=["QuestNotifier"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ke428")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -163.0
+offset_right = 276.0
+grow_vertical = 0
+alignment = 2

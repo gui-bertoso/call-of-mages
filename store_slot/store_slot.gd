@@ -15,11 +15,12 @@ func _ready() -> void:
 		$Label.text = item_to_sell.upgrade_name
 		$Label2.text = item_to_sell.upgrade_description
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if not can_buy: return
 	if Input.is_action_just_pressed("action_buy"):
 		if Globals.character.souls >= item_to_sell.price:
 			Globals.character.consume_souls(item_to_sell.price)
+			QuestsManager.catch_quest_event("buyed_items")
 			seller.sell_item()
 
 
