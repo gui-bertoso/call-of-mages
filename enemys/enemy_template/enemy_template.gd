@@ -33,6 +33,8 @@ func _on_area_2d_2_area_entered(area: Area2D) -> void:
 	a.global_position = $Marker2D.global_position
 	$Sprite2D/AnimationPlayer.play("hit_effect")
 	
+	QuestsManager.catch_quest_event("any_enemy")
+	
 	health -= area.damage
 	if health < 0:
 		Globals.character.add_exp(gived_exp)

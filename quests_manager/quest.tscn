@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvuphyiixgcos"]
+
+[ext_resource type="Script" uid="uid://ck23l6e02gyqx" path="res://quests_manager/quest.gd" id="1_75bwm"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_jms8c"]
+
+[node name="ColorRect" type="ColorRect"]
+custom_minimum_size = Vector2(0, 66)
+offset_right = 270.0
+offset_bottom = 66.0
+color = Color(0.18598092, 0.18598092, 0.18598092, 1)
+script = ExtResource("1_75bwm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 6.0
+offset_top = -28.0
+offset_right = 62.0
+offset_bottom = 27.0
+grow_vertical = 2
+texture = SubResource("NoiseTexture2D_jms8c")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 65.0
+offset_right = 170.0
+offset_bottom = 23.0
+text = "QUEST_NAME"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 23.0
+offset_right = 270.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 10
+text = "QUEST_DESCRIPTION"
+autowrap_mode = 3
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

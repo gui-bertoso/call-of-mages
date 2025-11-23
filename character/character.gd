@@ -49,6 +49,7 @@ func _ready():
 func consume_souls(value):
 	souls -= value
 	get_tree().call_group("SoulsContainer", "populate_souls")
+	QuestsManager.catch_quest_event("current_souls", souls)
 	if souls <= 0:
 		death()
 
@@ -68,6 +69,7 @@ func add_exp(value):
 	get_tree().get_first_node_in_group("ExpBar").update_max_value(needed_exp)
 	get_tree().get_first_node_in_group("ExpBar").update_value(current_exp)
 	get_tree().get_first_node_in_group("HUD").level_upped()
+	QuestsManager.catch_quest_event("current_level", current_level)
 
 func has_mana(value: int):
 	return mana >= value
