@@ -20,7 +20,7 @@ func _ready() -> void:
 		if randf_range(0, 1) > 0.5:
 			var marker: Marker2D = $StoreBackground.get_child(randi_range(0, 3))
 			if marker == null: return
-			var item = load("res://store_slot.tscn").instantiate()
+			var item = load("res://store_slot/store_slot.tscn").instantiate()
 			item.item_to_sell = itens_list[randi_range(0, itens_list.size()-1)]
 			item.seller = $SellerNPC
 			marker.add_child(item)

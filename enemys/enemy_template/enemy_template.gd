@@ -27,7 +27,7 @@ func _on_area_2d_body_exited(_body: Node2D) -> void:
 
 
 func _on_area_2d_2_area_entered(area: Area2D) -> void:
-	var a = load("res://damage_alert.tscn").instantiate()
+	var a = load("res://damage_alert/damage_alert.tscn").instantiate()
 	a.text = "-"+str(area.damage)
 	get_tree().current_scene.add_child(a)
 	a.global_position = $Marker2D.global_position
