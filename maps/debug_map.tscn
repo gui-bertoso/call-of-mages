@@ -1,48 +1,153 @@
-[gd_scene load_steps=5 format=3 uid="uid://ck2kchfngbda"]
+[gd_scene load_steps=23 format=3 uid="uid://ck2kchfngbda"]
 
 [ext_resource type="Texture2D" uid="uid://ci0rnlwgg53vd" path="res://assets/levels/sprite3.png" id="1_mxpld"]
 [ext_resource type="PackedScene" uid="uid://4fjo6cw3dkkv" path="res://store/store.tscn" id="2_qkt71"]
 [ext_resource type="PackedScene" uid="uid://dvj7r5lan43fn" path="res://character/character.tscn" id="3_gbpn1"]
 [ext_resource type="PackedScene" uid="uid://c7vxd57kxtseg" path="res://hud/hud.tscn" id="4_yh33p"]
+[ext_resource type="PackedScene" uid="uid://bm0ypugv4foyd" path="res://physic_item/physic_item.tscn" id="5_qkt71"]
+[ext_resource type="Resource" uid="uid://cut834v6i877v" path="res://books_datas/book0.tres" id="6_vnht4"]
+[ext_resource type="Resource" uid="uid://bw2onhcogxqeu" path="res://books_datas/book1.tres" id="7_8pti3"]
+[ext_resource type="Resource" uid="uid://3822rsx1gjwj" path="res://books_datas/book2.tres" id="8_tmsre"]
+[ext_resource type="Resource" uid="uid://cowdcb0iphooo" path="res://books_datas/book3.tres" id="9_eo8lb"]
+[ext_resource type="Resource" uid="uid://doevw6m42rxdo" path="res://books_datas/book4.tres" id="10_bgd0a"]
+[ext_resource type="Resource" uid="uid://cpfxf73qmiuw1" path="res://books_datas/book5.tres" id="11_0v1cc"]
+[ext_resource type="Resource" uid="uid://cigk1p6ishb7j" path="res://books_datas/book6.tres" id="12_1i1kk"]
+[ext_resource type="Resource" uid="uid://c6cwux7dvktea" path="res://books_datas/book7.tres" id="13_far5v"]
+[ext_resource type="Resource" uid="uid://kyxetmmtpqni" path="res://books_datas/book8.tres" id="14_u4akb"]
+[ext_resource type="Resource" uid="uid://byg17aqil7jy4" path="res://books_datas/book9.tres" id="15_jvj83"]
+[ext_resource type="Resource" uid="uid://bqj0t8v0ob878" path="res://books_datas/book10.tres" id="16_2vn1k"]
+[ext_resource type="Resource" uid="uid://dv7ytnowksiw1" path="res://books_datas/book11.tres" id="17_x5s4c"]
+[ext_resource type="Resource" uid="uid://ooxs6qi5x674" path="res://books_datas/book12.tres" id="18_8b81m"]
+[ext_resource type="Resource" uid="uid://bsghimbhfo3et" path="res://books_datas/book13.tres" id="19_ugicn"]
+[ext_resource type="Resource" uid="uid://baqiwf31fu4d0" path="res://books_datas/book14.tres" id="20_nw2aa"]
+[ext_resource type="Resource" uid="uid://vsgee5g50xdn" path="res://books_datas/book15.tres" id="21_xi3f5"]
+[ext_resource type="Resource" uid="uid://db6ibkubamcnv" path="res://books_datas/book16.tres" id="22_5foke"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Sprite3" type="Sprite2D" parent="."]
-position = Vector2(-154.99998, -220.99998)
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="Sprite3" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(-39.999996, -65)
 scale = Vector2(1.39375, 1.396875)
 texture = ExtResource("1_mxpld")
 
-[node name="Sprite4" type="Sprite2D" parent="."]
+[node name="Sprite4" type="Sprite2D" parent="CanvasGroup"]
 position = Vector2(142.99998, -183)
 scale = Vector2(1.39375, 1.396875)
 texture = ExtResource("1_mxpld")
 
-[node name="Sprite5" type="Sprite2D" parent="."]
-position = Vector2(-118.000015, 15)
+[node name="Sprite5" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(124.999985, -142)
 rotation = 2.25886
-scale = Vector2(1.39375, 1.396875)
+scale = Vector2(1.3937498, 1.396875)
 texture = ExtResource("1_mxpld")
 
-[node name="Sprite6" type="Sprite2D" parent="."]
-position = Vector2(142.99998, 36.999996)
+[node name="Sprite6" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(-64.000015, -108)
 rotation = 0.92874074
 scale = Vector2(1.39375, 1.396875)
 texture = ExtResource("1_mxpld")
 
-[node name="Sprite7" type="Sprite2D" parent="."]
-position = Vector2(47.999985, 14.999996)
+[node name="Sprite7" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(-16.000004, -167)
 rotation = 0.92874074
 scale = Vector2(1.39375, 1.396875)
 texture = ExtResource("1_mxpld")
 
-[node name="Sprite8" type="Sprite2D" parent="."]
-position = Vector2(67, -220)
+[node name="Sprite8" type="Sprite2D" parent="CanvasGroup"]
+position = Vector2(93.00001, -65)
 rotation = 0.92874074
 scale = Vector2(1.39375, 1.396875)
 texture = ExtResource("1_mxpld")
 
 [node name="Store" parent="." instance=ExtResource("2_qkt71")]
 position = Vector2(109, -222)
+
+[node name="ItensStand" type="Node2D" parent="."]
+
+[node name="PhysicItem" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-202, -254)
+book = ExtResource("6_vnht4")
+
+[node name="PhysicItem2" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-202, -188)
+book = ExtResource("7_8pti3")
+
+[node name="PhysicItem3" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-202, -120)
+book = ExtResource("8_tmsre")
+
+[node name="PhysicItem4" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-202, -56)
+book = ExtResource("9_eo8lb")
+
+[node name="PhysicItem5" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-202, 8)
+book = ExtResource("10_bgd0a")
+
+[node name="PhysicItem6" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-202, 84)
+book = ExtResource("11_0v1cc")
+
+[node name="PhysicItem7" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-157, -266)
+book = ExtResource("12_1i1kk")
+
+[node name="PhysicItem8" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-157, -200)
+book = ExtResource("13_far5v")
+
+[node name="PhysicItem9" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-157, -131)
+book = ExtResource("14_u4akb")
+
+[node name="PhysicItem10" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-157, -56)
+book = ExtResource("15_jvj83")
+
+[node name="PhysicItem11" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-157, 0)
+book = ExtResource("16_2vn1k")
+
+[node name="PhysicItem12" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-157, 72)
+book = ExtResource("17_x5s4c")
+
+[node name="PhysicItem13" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-112, -278)
+book = ExtResource("18_8b81m")
+
+[node name="PhysicItem14" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-112, -200)
+book = ExtResource("19_ugicn")
+
+[node name="PhysicItem15" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-112, -131)
+book = ExtResource("20_nw2aa")
+
+[node name="PhysicItem16" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-112, -56)
+book = ExtResource("21_xi3f5")
+
+[node name="PhysicItem17" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-112, 8)
+book = ExtResource("22_5foke")
+
+[node name="PhysicItem18" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-112, 72)
+
+[node name="PhysicItem19" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-247, -230)
+
+[node name="PhysicItem20" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-247, -143)
+
+[node name="PhysicItem21" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-292, -177)
+
+[node name="PhysicItem22" parent="ItensStand" instance=ExtResource("5_qkt71")]
+position = Vector2(-236, -80)
 
 [node name="Character" parent="." instance=ExtResource("3_gbpn1")]
 position = Vector2(-48, -65)

@@ -1,12 +1,14 @@
 extends Area2D
 
-@export var book: BookData
+@export var book: BookData = null
 var can_collect: bool = false
 
 func _ready() -> void:
-	$Sprite2D.texture = book.book_image
-	$Label.text = book.book_name
-	$Label2.text = book.book_description
+	if book == null: queue_free()
+	if book:
+		$Sprite2D.texture = book.book_image
+		$Label.text = book.book_name
+		$Label2.text = book.book_description
 
 func _process(_delta: float) -> void:
 	if can_collect:

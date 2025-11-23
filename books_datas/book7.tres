@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BookData" load_steps=4 format=3 uid="uid://c6cwux7dvktea"]
+
+[ext_resource type="Texture2D" uid="uid://ekekv2137nld" path="res://assets/books/book7.png" id="1_fvaw4"]
+[ext_resource type="PackedScene" uid="uid://brksm1sib1yx" path="res://books/book7.tscn" id="2_h4lsr"]
+[ext_resource type="Script" uid="uid://doaoovtm8acr" path="res://books_datas/book_data.gd" id="3_skw28"]
+
+[resource]
+script = ExtResource("3_skw28")
+book_name = "Book7"
+book_description = "A garden book"
+book_image = ExtResource("1_fvaw4")
+book_scene = ExtResource("2_h4lsr")
+book_rarity = "Rare"

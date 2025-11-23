@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://notevelrivhm"
-path="res://.godot/imported/sand_book.png-fddeaf53bfee29bf7f072747c79f9958.ctex"
+uid="uid://b7cp7sx4mes10"
+path="res://.godot/imported/book15.png-a09b46cf92bdacdbb465ae4526b60f5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/books/sand_book.png"
-dest_files=["res://.godot/imported/sand_book.png-fddeaf53bfee29bf7f072747c79f9958.ctex"]
+source_file="res://assets/books/book15.png"
+dest_files=["res://.godot/imported/book15.png-a09b46cf92bdacdbb465ae4526b60f5d.ctex"]
 
 [params]
 

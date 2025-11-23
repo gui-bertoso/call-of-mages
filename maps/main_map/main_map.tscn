@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://bm0ypugv4foyd" path="res://physic_item/physic_item.tscn" id="6_4d7sh"]
 [ext_resource type="PackedScene" uid="uid://bjoeuq5f4moy3" path="res://spawner/spawner.tscn" id="6_d21ai"]
 [ext_resource type="PackedScene" uid="uid://bhejb7nd430o6" path="res://enemys/ghost/ghost.tscn" id="6_kdubu"]
-[ext_resource type="Resource" uid="uid://bw2onhcogxqeu" path="res://books_datas/book_of_losers.tres" id="7_ir8iy"]
-[ext_resource type="Resource" uid="uid://kyxetmmtpqni" path="res://books_datas/green_calls.tres" id="11_hqns4"]
+[ext_resource type="Resource" uid="uid://bw2onhcogxqeu" path="res://books_datas/book1.tres" id="7_ir8iy"]
+[ext_resource type="Resource" uid="uid://kyxetmmtpqni" path="res://books_datas/book8.tres" id="11_hqns4"]
 [ext_resource type="PackedScene" uid="uid://4fjo6cw3dkkv" path="res://store/store.tscn" id="12_x0ka3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rj586"]

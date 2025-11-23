@@ -1,31 +1,37 @@
 extends Node2D
 
 var itens_list = [
-	preload("res://books_datas/book_of_losers.tres"),
-	preload("res://books_datas/book_of_losers.tres"),
-	preload("res://books_datas/book_of_losers.tres"),
-	preload("res://books_datas/book_of_losers.tres"),
-	preload("res://books_datas/book_of_losers.tres"),
-	preload("res://books_datas/green_calls.tres"),
-	preload("res://books_datas/green_calls.tres"),
-	preload("res://books_datas/green_calls.tres"),
-	preload("res://books_datas/green_calls.tres"),
-	preload("res://books_datas/green_calls.tres"),
+	preload("res://books_datas/book0.tres"),
+	preload("res://books_datas/book1.tres"),
+	preload("res://books_datas/book2.tres"),
+	preload("res://books_datas/book3.tres"),
+	preload("res://books_datas/book4.tres"),
+	preload("res://books_datas/book5.tres"),
+	preload("res://books_datas/book6.tres"),
+	preload("res://books_datas/book7.tres"),
+	preload("res://books_datas/book8.tres"),
+	preload("res://books_datas/book9.tres"),
+	preload("res://books_datas/book10.tres"),
+	preload("res://books_datas/book11.tres"),
+	preload("res://books_datas/book12.tres"),
+	preload("res://books_datas/book13.tres"),
+	preload("res://books_datas/book14.tres"),
+	preload("res://books_datas/book15.tres"),
+	preload("res://books_datas/book16.tres")
 ]
 
 var has_products = false
  
 func _ready() -> void:
-	for i in 4:
-		if randf_range(0, 1) > 0.5:
+	for i in 7:
+		if randf_range(0, 1) > 0.1:
 			var marker: Marker2D = $StoreBackground.get_child(randi_range(0, 3))
-			if marker == null: return
+			if marker == null or marker.get_child_count() > 0: return
 			var item = load("res://store_slot/store_slot.tscn").instantiate()
 			item.item_to_sell = itens_list[randi_range(0, itens_list.size()-1)]
 			item.seller = $SellerNPC
 			marker.add_child(item)
 	has_products = true
-
 
 func _process(_delta: float) -> void:
 	if not has_products: return

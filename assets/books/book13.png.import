@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lqvepv8n52cr"
-path="res://.godot/imported/green_book2.png-b186f0a8d4cb6c864a9f7a9e988b1d2b.ctex"
+uid="uid://notevelrivhm"
+path="res://.godot/imported/book13.png-2ccd6939086156a4469bd2a2cfe45857.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/books/green_book2.png"
-dest_files=["res://.godot/imported/green_book2.png-b186f0a8d4cb6c864a9f7a9e988b1d2b.ctex"]
+source_file="res://assets/books/book13.png"
+dest_files=["res://.godot/imported/book13.png-2ccd6939086156a4469bd2a2cfe45857.ctex"]
 
 [params]
 
