@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://brksm1sib1yx"]
 
 [ext_resource type="PackedScene" uid="uid://me21a63qese1" path="res://books/book/book.tscn" id="1_manh5"]
-[ext_resource type="PackedScene" uid="uid://b3s058nuphx82" path="res://projectiles/white_projectile.tscn" id="2_1mmh7"]
+[ext_resource type="PackedScene" uid="uid://di7huhmrih0lx" path="res://projectiles/shot7.tscn" id="2_manh5"]
 [ext_resource type="Texture2D" uid="uid://ekekv2137nld" path="res://assets/books/book7.png" id="3_manh5"]
 
 [node name="Book" instance=ExtResource("1_manh5")]
-projectile = ExtResource("2_1mmh7")
+projectile = ExtResource("2_manh5")
 
 [node name="GPUParticles2D" parent="." index="0"]
 position = Vector2(7, 0)
