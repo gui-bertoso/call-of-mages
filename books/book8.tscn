@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://cax8dqyxkq5md"]
 
 [ext_resource type="PackedScene" uid="uid://me21a63qese1" path="res://books/book/book.tscn" id="1_tbyhg"]
-[ext_resource type="PackedScene" uid="uid://hld87dwg5ntc" path="res://projectiles/leaf_projectile.tscn" id="2_nprwf"]
+[ext_resource type="PackedScene" uid="uid://2sgirdnhbfnl" path="res://projectiles/shot8.tscn" id="2_1bws0"]
 [ext_resource type="Texture2D" uid="uid://ck7hnyhntghx7" path="res://assets/books/book8.png" id="2_tlutq"]
 
 [node name="Book" instance=ExtResource("1_tbyhg")]
-projectile = ExtResource("2_nprwf")
+projectile = ExtResource("2_1bws0")
 
 [node name="GPUParticles2D" parent="." index="0"]
 modulate = Color(0, 0.5372549, 0, 1)

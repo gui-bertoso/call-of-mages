@@ -1,0 +1,81 @@
+[gd_scene load_steps=9 format=3 uid="uid://dr5fkocqgik15"]
+
+[ext_resource type="PackedScene" uid="uid://b18onlwam3qiq" path="res://projectiles/projectile_template/projectile_template.tscn" id="1_3ja82"]
+[ext_resource type="Texture2D" uid="uid://dd67wo1tmhe2b" path="res://assets/projectiles/shot4.png" id="2_3ja82"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ov5mq"]
+atlas = ExtResource("2_3ja82")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3b655"]
+atlas = ExtResource("2_3ja82")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mim7e"]
+atlas = ExtResource("2_3ja82")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wiees"]
+atlas = ExtResource("2_3ja82")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bh0lh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ov5mq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3b655")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mim7e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wiees")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q666c"]
+size = Vector2(90.5, 6.5)
+
+[node name="LeafProjectile" instance=ExtResource("1_3ja82")]
+speed = 180
+damage = 2
+
+[node name="Sprite2D" parent="." index="0"]
+position = Vector2(74.99999, -1.1920929e-07)
+scale = Vector2(2.0000005, 0.6875)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.75110924
+
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(14.999998, -1.1920929e-07)
+scale = Vector2(2.0000005, 0.6875)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.24225925
+
+[node name="Sprite2D3" type="AnimatedSprite2D" parent="." index="2"]
+position = Vector2(45, -7.1054274e-15)
+scale = Vector2(2.0000005, 0.6875)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.6814593
+
+[node name="Area2D" parent="." index="3"]
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(44.75, -0.25)
+shape = SubResource("RectangleShape2D_q666c")
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="5"]
+position = Vector2(-23, 0)
+target_position = Vector2(37, 0)
+collision_mask = 8
+collide_with_areas = true

@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://dqfqc06q1ef3t"]
+
+[ext_resource type="PackedScene" uid="uid://b18onlwam3qiq" path="res://projectiles/projectile_template/projectile_template.tscn" id="1_xm8vy"]
+[ext_resource type="Texture2D" uid="uid://d16pfd15t3wlm" path="res://assets/projectiles/shot11.png" id="2_xm8vy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3d1cq"]
+atlas = ExtResource("2_xm8vy")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jt75i"]
+atlas = ExtResource("2_xm8vy")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lcb0"]
+atlas = ExtResource("2_xm8vy")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bh0lh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3d1cq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jt75i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lcb0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l4tq4"]
+radius = 6.519202
+
+[node name="LeafProjectile" instance=ExtResource("1_xm8vy")]
+speed = 180
+damage = 2
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.26880896
+
+[node name="Area2D" parent="." index="1"]
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("CircleShape2D_l4tq4")
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="3"]
+position = Vector2(-23, 0)
+target_position = Vector2(37, 0)
+collision_mask = 8
+collide_with_areas = true

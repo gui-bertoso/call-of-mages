@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://ujkmb1fyxe6i"]
+
+[ext_resource type="PackedScene" uid="uid://b18onlwam3qiq" path="res://projectiles/projectile_template/projectile_template.tscn" id="1_bfygf"]
+[ext_resource type="Texture2D" uid="uid://dai8gikivbolv" path="res://assets/projectiles/shot14.png" id="2_bfygf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exiws"]
+atlas = ExtResource("2_bfygf")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4276l"]
+atlas = ExtResource("2_bfygf")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4boxq"]
+atlas = ExtResource("2_bfygf")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_syvnk"]
+atlas = ExtResource("2_bfygf")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ougpc"]
+atlas = ExtResource("2_bfygf")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bh0lh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exiws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4276l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4boxq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_syvnk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ougpc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q666c"]
+size = Vector2(17, 7)
+
+[node name="LeafProjectile" instance=ExtResource("1_bfygf")]
+speed = 180
+damage = 2
+
+[node name="Sprite2D" parent="." index="0"]
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.26880896
+
+[node name="Area2D" parent="." index="1"]
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_q666c")
+
+[node name="RayCast2D" type="RayCast2D" parent="." index="3"]
+position = Vector2(-23, 0)
+target_position = Vector2(37, 0)
+collision_mask = 8
+collide_with_areas = true
