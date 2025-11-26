@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ck2kchfngbda"]
+[gd_scene load_steps=24 format=3 uid="uid://ck2kchfngbda"]
 
 [ext_resource type="Texture2D" uid="uid://ci0rnlwgg53vd" path="res://assets/levels/sprite3.png" id="1_mxpld"]
 [ext_resource type="PackedScene" uid="uid://4fjo6cw3dkkv" path="res://store/store.tscn" id="2_qkt71"]
@@ -22,6 +22,7 @@
 [ext_resource type="Resource" uid="uid://baqiwf31fu4d0" path="res://books_datas/book14.tres" id="20_nw2aa"]
 [ext_resource type="Resource" uid="uid://vsgee5g50xdn" path="res://books_datas/book15.tres" id="21_xi3f5"]
 [ext_resource type="Resource" uid="uid://db6ibkubamcnv" path="res://books_datas/book16.tres" id="22_5foke"]
+[ext_resource type="PackedScene" uid="uid://bhejb7nd430o6" path="res://enemys/ghost/ghost.tscn" id="23_8pti3"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -153,3 +154,6 @@ position = Vector2(-236, -80)
 position = Vector2(-48, -65)
 
 [node name="HUD" parent="." instance=ExtResource("4_yh33p")]
+
+[node name="Ghost" parent="." instance=ExtResource("23_8pti3")]
+position = Vector2(242, -320)

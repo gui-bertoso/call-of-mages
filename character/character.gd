@@ -85,7 +85,7 @@ func equip_book(book_scene):
 	current_book = book_scene.instantiate()
 	$Node2D/Marker2D.add_child(current_book)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	animate()
 
 func _physics_process(_delta: float) -> void:

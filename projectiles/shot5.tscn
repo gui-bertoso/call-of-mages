@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dh2raf384qaqf"]
+[gd_scene load_steps=9 format=3 uid="uid://dh2raf384qaqf"]
 
 [ext_resource type="PackedScene" uid="uid://b18onlwam3qiq" path="res://projectiles/projectile_template/projectile_template.tscn" id="1_jlamo"]
+[ext_resource type="Resource" uid="uid://tpi0a187c6s6" path="res://effects/burning.tres" id="2_ix5d1"]
 [ext_resource type="Texture2D" uid="uid://u46etcrpcppe" path="res://assets/projectiles/shot5.png" id="2_jlamo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ix5d1"]
@@ -36,8 +37,9 @@ animations = [{
 radius = 5.59017
 
 [node name="LeafProjectile" instance=ExtResource("1_jlamo")]
-speed = 180
+speed = 90
 damage = 2
+effect_scene = ExtResource("2_ix5d1")
 
 [node name="Sprite2D" parent="." index="0"]
 scale = Vector2(1.2, 1.2)

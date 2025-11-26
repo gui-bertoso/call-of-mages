@@ -43,8 +43,8 @@ animations = [{
 size = Vector2(19, 13)
 
 [node name="LeafProjectile" instance=ExtResource("1_7vmws")]
-speed = 180
-damage = 2
+speed = 70
+damage = 7
 
 [node name="Sprite2D" parent="." index="0"]
 scale = Vector2(1.2, 1.2)

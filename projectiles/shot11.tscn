@@ -36,8 +36,8 @@ animations = [{
 radius = 6.519202
 
 [node name="LeafProjectile" instance=ExtResource("1_xm8vy")]
-speed = 180
-damage = 2
+speed = 100
+damage = 18
 
 [node name="Sprite2D" parent="." index="0"]
 scale = Vector2(1.2, 1.2)

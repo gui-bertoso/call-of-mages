@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://fqrsp4lvk5q8"]
+[gd_scene load_steps=11 format=3 uid="uid://fqrsp4lvk5q8"]
 
 [ext_resource type="PackedScene" uid="uid://b18onlwam3qiq" path="res://projectiles/projectile_template/projectile_template.tscn" id="1_cigjx"]
 [ext_resource type="Texture2D" uid="uid://cy2j6nmsr7sh4" path="res://assets/projectiles/shot2.png" id="2_cigjx"]
+[ext_resource type="Script" uid="uid://cj02hlnqoaw1c" path="res://projectiles/shot_3.gd" id="2_ng58o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ng58o"]
 atlas = ExtResource("2_cigjx")
@@ -40,14 +41,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q666c"]
-size = Vector2(13, 13)
+size = Vector2(23, 22)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gc4vs"]
+radius = 123.101585
 
 [node name="LeafProjectile" instance=ExtResource("1_cigjx")]
-speed = 180
-damage = 2
+script = ExtResource("2_ng58o")
 
 [node name="Sprite2D" parent="." index="0"]
-scale = Vector2(1.2, 1.2)
+scale = Vector2(2.03, 2.03)
 sprite_frames = SubResource("SpriteFrames_bh0lh")
 autoplay = "default"
 frame_progress = 0.26880896
@@ -56,7 +59,7 @@ frame_progress = 0.26880896
 collision_mask = 0
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2(0.5, 0.5)
+position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_q666c")
 
 [node name="RayCast2D" type="RayCast2D" parent="." index="3"]
@@ -64,3 +67,16 @@ position = Vector2(-23, 0)
 target_position = Vector2(37, 0)
 collision_mask = 8
 collide_with_areas = true
+
+[node name="Timer" parent="." index="4"]
+wait_time = 2.0
+
+[node name="Area2D2" type="Area2D" parent="." index="5"]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" index="0"]
+shape = SubResource("CircleShape2D_gc4vs")
+
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="." method="_on_area_2d_2_body_exited"]

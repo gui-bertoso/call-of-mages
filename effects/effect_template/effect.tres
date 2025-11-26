@@ -1,0 +1,6 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bputye1uw180"]
+
+[ext_resource type="Script" uid="uid://bk45ce8hbvj1u" path="res://effects/effect_template/effect.gd" id="1_3bosx"]
+
+[resource]
+script = ExtResource("1_3bosx")

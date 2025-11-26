@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7l4fl8ecy15t"
-path="res://.godot/imported/effect.png-41940da2e8e0b5eaf62855e28f8f3020.ctex"
+uid="uid://b04ts5bfef10d"
+path="res://.godot/imported/shadow.png-d6e47155c9296361e88656f837203da2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/effects/effect.png"
-dest_files=["res://.godot/imported/effect.png-41940da2e8e0b5eaf62855e28f8f3020.ctex"]
+source_file="res://assets/VFX/shadow.png"
+dest_files=["res://.godot/imported/shadow.png-d6e47155c9296361e88656f837203da2.ctex"]
 
 [params]
 
