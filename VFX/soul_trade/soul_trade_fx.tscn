@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://e6od82ao4tiy"]
 
-[ext_resource type="Script" uid="uid://ci31e6x7ujasx" path="res://effects/soul_trade/soul_trade_fx.gd" id="1_1xd3y"]
-[ext_resource type="Texture2D" uid="uid://7l4fl8ecy15t" path="res://assets/effects/effect.png" id="1_gdse7"]
+[ext_resource type="Script" uid="uid://ci31e6x7ujasx" path="res://VFX/soul_trade/soul_trade_fx.gd" id="1_1xd3y"]
+[ext_resource type="Texture2D" uid="uid://7l4fl8ecy15t" path="res://assets/VFX/effect.png" id="1_gdse7"]
 
 [sub_resource type="Animation" id="Animation_gdse7"]
 resource_name = "trade"

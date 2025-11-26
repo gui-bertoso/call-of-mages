@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bs278cubkkoqn" path="res://npcs/npc_template/npc_template.tscn" id="1_oa8id"]
 [ext_resource type="Script" uid="uid://ds6iysadwrgbv" path="res://npcs/seller_npc/seller_npc.gd" id="2_gi2sl"]
 [ext_resource type="Texture2D" uid="uid://bvbsrkh77ba7i" path="res://assets/NPCS/SellerNPC.png" id="2_smr4o"]
-[ext_resource type="PackedScene" uid="uid://e6od82ao4tiy" path="res://effects/soul_trade/soul_trade_fx.tscn" id="4_514sx"]
+[ext_resource type="PackedScene" uid="uid://e6od82ao4tiy" path="res://VFX/soul_trade/soul_trade_fx.tscn" id="4_514sx"]
 
 [node name="SellerNPC" instance=ExtResource("1_oa8id")]
 script = ExtResource("2_gi2sl")

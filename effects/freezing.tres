@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Effect" load_steps=2 format=3 uid="uid://dpm0yecfr72m5"]
+
+[ext_resource type="Script" uid="uid://bk45ce8hbvj1u" path="res://effects/effect_template/effect.gd" id="1_urald"]
+
+[resource]
+script = ExtResource("1_urald")
+effect_name = "Freezing"

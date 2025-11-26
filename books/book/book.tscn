@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://me21a63qese1"]
 
 [ext_resource type="Script" uid="uid://d25v1vgix7fnc" path="res://books/book/book.gd" id="1_u7trf"]
-[ext_resource type="Texture2D" uid="uid://7l4fl8ecy15t" path="res://assets/effects/effect.png" id="2_q7t1q"]
+[ext_resource type="Texture2D" uid="uid://7l4fl8ecy15t" path="res://assets/VFX/effect.png" id="2_q7t1q"]
 
 [node name="Book" type="Node2D" unique_id=538403219]
 z_index = 1

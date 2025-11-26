@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhejb7nd430o6"]
+[gd_scene load_steps=15 format=3 uid="uid://bhejb7nd430o6"]
 
 [ext_resource type="PackedScene" uid="uid://berokxlx0e7or" path="res://enemys/enemy_template/enemy_template.tscn" id="1_v5pp4"]
-[ext_resource type="Script" path="res://area_2d_2.gd" id="3_obmiq"]
+[ext_resource type="Texture2D" uid="uid://d08fqioxuvdjv" path="res://assets/VFX/ice.png" id="2_vrjr3"]
 
 [sub_resource type="Shader" id="Shader_ut0pw"]
 code = "shader_type canvas_item;
@@ -17,11 +17,159 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6attn"]
 shader = SubResource("Shader_ut0pw")
-shader_parameter/flash_color = Color(1, 1, 1, 1)
+shader_parameter/flash_color = Color(0, 1, 1, 1)
 shader_parameter/flash_on = 0.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_obmiq"]
 load_path = "res://.godot/imported/ghost.png-f343bb4bd35f12f8f631dffe3b7d2891.ctex"
+
+[sub_resource type="Animation" id="Animation_vrjr3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/flash_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/flash_on")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_4tv75"]
+resource_name = "freezed"
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/flash_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/flash_on")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_f322c"]
+resource_name = "onvenom"
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/flash_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(4.3197347e-06, 0.44203255, 0.08176539, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/flash_on")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_mdcsq"]
+resource_name = "unfreezed"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/flash_on")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/flash_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4n02g"]
+resource_name = "unvenom"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:material:shader_parameter/flash_on")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:material:shader_parameter/flash_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f322c"]
+_data = {
+&"RESET": SubResource("Animation_vrjr3"),
+&"freezed": SubResource("Animation_4tv75"),
+&"onvenom": SubResource("Animation_f322c"),
+&"unfreezed": SubResource("Animation_mdcsq"),
+&"unvenom": SubResource("Animation_4n02g")
+}
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6attn"]
 radius = 7.0
@@ -34,33 +182,37 @@ radius = 268.42505
 radius = 6.999703
 height = 19.999151
 
-[node name="Ghost" unique_id=1136143948 instance=ExtResource("1_v5pp4")]
+[node name="Ghost" instance=ExtResource("1_v5pp4")]
 
-[node name="Sprite2D" parent="." index="0" unique_id=1438285359]
+[node name="Sprite2D" parent="." index="0"]
 material = SubResource("ShaderMaterial_6attn")
 texture = SubResource("CompressedTexture2D_obmiq")
 
-[node name="CollisionShape2D" parent="." index="1" unique_id=949062856]
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Sprite2D" index="1"]
+libraries = {
+&"": SubResource("AnimationLibrary_f322c")
+}
+
+[node name="CollisionShape2D" parent="." index="1"]
 position = Vector2(0, 10)
 rotation = -1.5931281
 shape = SubResource("CapsuleShape2D_6attn")
 
-[node name="Area2D" parent="." index="2" unique_id=1723013681]
-collision_layer = 8
-
-[node name="CollisionShape2D" parent="Area2D" index="0" unique_id=428585938]
+[node name="CollisionShape2D" parent="Area2D" index="0"]
 shape = SubResource("CircleShape2D_6attn")
 
-[node name="Marker2D" parent="." index="3" unique_id=1731830602]
+[node name="Marker2D" parent="." index="3"]
 position = Vector2(-2, -21)
 
-[node name="Area2D2" parent="." index="4" unique_id=1163426105]
-collision_layer = 8
-script = ExtResource("3_obmiq")
-
-[node name="CollisionShape2D" parent="Area2D2" index="0" unique_id=149886654]
+[node name="CollisionShape2D" parent="Area2D2" index="0"]
 position = Vector2(0, 10)
 rotation = -1.5800092
 shape = SubResource("CapsuleShape2D_obmiq")
+
+[node name="Ice" type="Sprite2D" parent="VFX" index="1"]
+visible = false
+modulate = Color(1, 1, 1, 0.50980395)
+position = Vector2(2, 2)
+texture = ExtResource("2_vrjr3")
 
 [connection signal="area_entered" from="Area2D2" to="." method="_on_area_2d_2_area_entered"]

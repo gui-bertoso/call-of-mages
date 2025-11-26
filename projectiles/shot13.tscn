@@ -47,11 +47,11 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q666c"]
-size = Vector2(20, 16)
+size = Vector2(56, 55)
 
 [node name="LeafProjectile" instance=ExtResource("1_xes04")]
-speed = 180
-damage = 2
+speed = 210
+damage = 3
 
 [node name="Sprite2D" parent="." index="0"]
 scale = Vector2(1.2, 1.2)
@@ -59,13 +59,154 @@ sprite_frames = SubResource("SpriteFrames_bh0lh")
 autoplay = "default"
 frame_progress = 0.43689296
 
-[node name="Area2D" parent="." index="1"]
+[node name="Sprite2D2" type="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(6, -10)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D3" type="AnimatedSprite2D" parent="." index="2"]
+position = Vector2(-4, -13)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D4" type="AnimatedSprite2D" parent="." index="3"]
+position = Vector2(6, -20)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D5" type="AnimatedSprite2D" parent="." index="4"]
+position = Vector2(22, -10)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D6" type="AnimatedSprite2D" parent="." index="5"]
+position = Vector2(23, -18)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D7" type="AnimatedSprite2D" parent="." index="6"]
+position = Vector2(28, 0)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D8" type="AnimatedSprite2D" parent="." index="7"]
+position = Vector2(28, 12)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D9" type="AnimatedSprite2D" parent="." index="8"]
+position = Vector2(13, 19)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D10" type="AnimatedSprite2D" parent="." index="9"]
+position = Vector2(0, 22)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D11" type="AnimatedSprite2D" parent="." index="10"]
+position = Vector2(-4, 10)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D12" type="AnimatedSprite2D" parent="." index="11"]
+position = Vector2(13, 9)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D13" type="AnimatedSprite2D" parent="." index="12"]
+position = Vector2(39, -16)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D14" type="AnimatedSprite2D" parent="." index="13"]
+position = Vector2(13, -1)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D15" type="AnimatedSprite2D" parent="." index="14"]
+position = Vector2(39, -5)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D16" type="AnimatedSprite2D" parent="." index="15"]
+position = Vector2(40, 5)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D17" type="AnimatedSprite2D" parent="." index="16"]
+position = Vector2(42, 19)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D18" type="AnimatedSprite2D" parent="." index="17"]
+position = Vector2(27, 24)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D19" type="AnimatedSprite2D" parent="." index="18"]
+position = Vector2(37, -26)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D20" type="AnimatedSprite2D" parent="." index="19"]
+position = Vector2(-4, -26)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Sprite2D21" type="AnimatedSprite2D" parent="." index="20"]
+position = Vector2(18, -28)
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_bh0lh")
+autoplay = "default"
+frame_progress = 0.43689296
+
+[node name="Area2D" parent="." index="21"]
 collision_mask = 0
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(18, -3.5)
 shape = SubResource("RectangleShape2D_q666c")
 
-[node name="RayCast2D" type="RayCast2D" parent="." index="3"]
+[node name="RayCast2D" type="RayCast2D" parent="." index="23"]
 position = Vector2(-23, 0)
 target_position = Vector2(37, 0)
 collision_mask = 8

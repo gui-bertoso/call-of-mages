@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpwdadj6gk4uw"]
+[gd_scene load_steps=10 format=3 uid="uid://dpwdadj6gk4uw"]
 
 [ext_resource type="PackedScene" uid="uid://b18onlwam3qiq" path="res://projectiles/projectile_template/projectile_template.tscn" id="1_4cvyx"]
 [ext_resource type="Texture2D" uid="uid://ctm2akvt8qrbn" path="res://assets/projectiles/shot6.png" id="2_4cvyx"]
+[ext_resource type="Resource" uid="uid://bmf8o5iwd32ef" path="res://effects/venom.tres" id="2_7yetq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7yetq"]
 atlas = ExtResource("2_4cvyx")
@@ -43,8 +44,9 @@ animations = [{
 radius = 6.0
 
 [node name="LeafProjectile" instance=ExtResource("1_4cvyx")]
-speed = 180
-damage = 2
+speed = 200
+damage = 3
+effect_scene = ExtResource("2_7yetq")
 
 [node name="Sprite2D" parent="." index="0"]
 scale = Vector2(1.2, 1.2)

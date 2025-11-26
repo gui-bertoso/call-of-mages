@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bh1gmwp2bmcua"]
+[gd_scene load_steps=9 format=3 uid="uid://bh1gmwp2bmcua"]
 
 [ext_resource type="PackedScene" uid="uid://b18onlwam3qiq" path="res://projectiles/projectile_template/projectile_template.tscn" id="1_cuqmf"]
+[ext_resource type="Resource" uid="uid://dpm0yecfr72m5" path="res://effects/freezing.tres" id="2_8qyt3"]
 [ext_resource type="Texture2D" uid="uid://b7m357q3xcpt4" path="res://assets/projectiles/shot9.png" id="2_cuqmf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8qyt3"]
@@ -36,8 +37,9 @@ animations = [{
 size = Vector2(18, 4)
 
 [node name="LeafProjectile" instance=ExtResource("1_cuqmf")]
-speed = 180
-damage = 2
+speed = 150
+damage = 3
+effect_scene = ExtResource("2_8qyt3")
 
 [node name="Sprite2D" parent="." index="0"]
 scale = Vector2(1.2, 1.2)
