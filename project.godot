@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CallsOfMages"
-run/main_scene="uid://ck2kchfngbda"
+run/main_scene="uid://2la6hpjgd1ei"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,7 +19,8 @@ config/icon="res://icon.svg"
 
 Globals="*uid://c0hcgg75mhrb4"
 FadeScreen="*res://fade_screen/fade_screen.tscn"
-QuestsManager="*res://autoload/quests_manager.gd"
+Achievements="*res://autoload/achievements.gd"
+DataManagement="*res://autoload/data_management.gd"
 
 [display]
 
@@ -32,6 +33,10 @@ ExpBar=""
 HUD=""
 SoulsContainer=""
 QuestNotifier=""
+
+[gui]
+
+theme/custom_font="uid://cq464t0l0jjom"
 
 [input]
 

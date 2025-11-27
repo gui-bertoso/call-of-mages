@@ -49,7 +49,7 @@ func _on_area_2d_2_area_entered(area: Area2D) -> void:
 		add_effect(area.get_parent().effect_scene.duplicate())
 		print("effect added")
 	
-	QuestsManager.catch_quest_event("any_enemy")
+	Achievements.catch_quest_event("any_enemy")
 	
 	health -= area.damage
 	
