@@ -25,6 +25,5 @@ func _on_timer_timeout() -> void:
 func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	enemy = body
 
-
 func _on_area_2d_2_body_exited(_body: Node2D) -> void:
 	enemy = null

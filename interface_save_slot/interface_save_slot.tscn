@@ -1,0 +1,129 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmuuqvmbha1ce"]
+
+[ext_resource type="Texture2D" uid="uid://ctb5n6y1onooi" path="res://assets/character/base_character_head.png" id="1_2dtj1"]
+[ext_resource type="Script" uid="uid://r4paykc0q17h" path="res://interface_save_slot/interface_save_slot.gd" id="1_lngd1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lngd1"]
+bg_color = Color(0.16206557, 0.1620656, 0.16206554, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ftrbg"]
+bg_color = Color(0.10374365, 0.1037435, 0.103743516, 1)
+
+[node name="ColorRect" type="Button"]
+custom_minimum_size = Vector2(732, 100)
+offset_right = 732.0
+offset_bottom = 100.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_lngd1")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_lngd1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ftrbg")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_lngd1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lngd1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_lngd1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_lngd1")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_lngd1")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_lngd1")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_lngd1")
+theme_override_styles/focus = SubResource("StyleBoxFlat_lngd1")
+script = ExtResource("1_lngd1")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.0
+offset_top = -21.0
+offset_right = 52.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 34
+text = "EMPTY"
+
+[node name="SaveData" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 334.0
+offset_bottom = 100.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="SaveData"]
+custom_minimum_size = Vector2(138, 96)
+layout_mode = 0
+offset_right = 138.0
+offset_bottom = 96.0
+texture = ExtResource("1_2dtj1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SaveData"]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 6.0
+offset_right = 349.0
+offset_bottom = 92.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SaveData/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SaveData/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Played time"
+
+[node name="Label2" type="Label" parent="SaveData/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = ":"
+
+[node name="Label3" type="Label" parent="SaveData/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "0"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SaveData/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SaveData/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Character level"
+
+[node name="Label2" type="Label" parent="SaveData/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = ":"
+
+[node name="Label3" type="Label" parent="SaveData/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "0"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="SaveData/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SaveData/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Difficulty"
+
+[node name="Label2" type="Label" parent="SaveData/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = ":"
+
+[node name="Label3" type="Label" parent="SaveData/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "Normal"
+
+[connection signal="button_up" from="." to="." method="_on_button_up"]

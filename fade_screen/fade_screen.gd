@@ -1,8 +1,5 @@
 extends CanvasLayer
 
-signal all_teleports_off
-signal all_teleports_on
-
 func fade():
 	$AnimationPlayer.play("fade_in")
 
