@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://cyywxx71yij1e"]
+
+[ext_resource type="Script" uid="uid://cqrk05rsdku5b" path="res://campfire/campfire.gd" id="1_6rc7x"]
+[ext_resource type="Texture2D" uid="uid://ckjb2lk18h13n" path="res://assets/structures/campfire.png" id="1_qw3k3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6rc7x"]
+radius = 21.023796
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0g46y"]
+radius = 28.0
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_6rc7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -7.0000005)
+scale = Vector2(2.125, 1.46875)
+texture = ExtResource("1_qw3k3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-45, 15)
+shape = SubResource("CircleShape2D_6rc7x")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 35)
+shape = SubResource("CircleShape2D_0g46y")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(44, 12)
+shape = SubResource("CircleShape2D_6rc7x")

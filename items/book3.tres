@@ -1,6 +1,12 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=2 format=3 uid="uid://bjpw2hh07027e"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://bjpw2hh07027e"]
 
 [ext_resource type="Script" uid="uid://d3ifpemcx4rbq" path="res://items/item.gd" id="1_7ni1e"]
+[ext_resource type="Texture2D" uid="uid://b3gptqo6ahr45" path="res://assets/books/book3.png" id="1_ueceb"]
+[ext_resource type="PackedScene" uid="uid://d2mp1fxm1ig87" path="res://books/book3.tscn" id="2_avhgj"]
 
 [resource]
 script = ExtResource("1_7ni1e")
+item_name = "Book3"
+item_image = ExtResource("1_ueceb")
+item_scene = ExtResource("2_avhgj")
+item_type = "book"
