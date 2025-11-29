@@ -1,0 +1,244 @@
+[gd_scene load_steps=12 format=3 uid="uid://cg022mb52q8pd"]
+
+[ext_resource type="Script" uid="uid://bapq12x5plprw" path="res://tutorial_sland/tutorial_sland.gd" id="1_h1s57"]
+[ext_resource type="Texture2D" uid="uid://ci0rnlwgg53vd" path="res://assets/levels/sprite3.png" id="2_nijp8"]
+[ext_resource type="PackedScene" uid="uid://cuc61fbi2dr0g" path="res://portal/portal.tscn" id="3_v6j6d"]
+[ext_resource type="PackedScene" uid="uid://f3jla6krre0h" path="res://visibility_triger/visibility_triger.tscn" id="4_vi55c"]
+[ext_resource type="PackedScene" uid="uid://bm0ypugv4foyd" path="res://physic_item/physic_item.tscn" id="5_0gilg"]
+[ext_resource type="Resource" uid="uid://cut834v6i877v" path="res://items/book0.tres" id="6_2s84e"]
+[ext_resource type="PackedScene" uid="uid://36ohh1vml3qd" path="res://exit_portal/exit_portal.tscn" id="7_2s84e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dj27v"]
+size = Vector2(77, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7bfrq"]
+size = Vector2(163, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gilg"]
+size = Vector2(92, 75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2s84e"]
+size = Vector2(121, 234.5)
+
+[node name="Sland" type="Node2D"]
+script = ExtResource("1_h1s57")
+
+[node name="Scenario" type="CanvasGroup" parent="."]
+
+[node name="Sprite3" type="Sprite2D" parent="Scenario"]
+position = Vector2(-26, 120.99999)
+scale = Vector2(1.071, 0.727)
+texture = ExtResource("2_nijp8")
+
+[node name="Sprite4" type="Sprite2D" parent="Scenario"]
+position = Vector2(-50.999992, 123)
+rotation = -0.55003613
+scale = Vector2(1.3328867, 0.7950734)
+texture = ExtResource("2_nijp8")
+
+[node name="Sprite5" type="Sprite2D" parent="Scenario"]
+position = Vector2(20.000015, 94.00001)
+scale = Vector2(1.071, 0.727)
+texture = ExtResource("2_nijp8")
+
+[node name="Sprite6" type="Sprite2D" parent="Scenario"]
+position = Vector2(40, 121)
+scale = Vector2(1.071, 0.96975)
+texture = ExtResource("2_nijp8")
+
+[node name="Sprite7" type="Sprite2D" parent="Scenario"]
+position = Vector2(145, 77.00001)
+rotation = 2.8797934
+scale = Vector2(1.071, 0.72700006)
+texture = ExtResource("2_nijp8")
+
+[node name="Sprite8" type="Sprite2D" parent="Scenario"]
+position = Vector2(145, 144)
+rotation = 2.1192796
+scale = Vector2(0.9274482, 0.70442104)
+texture = ExtResource("2_nijp8")
+
+[node name="Sprite9" type="Sprite2D" parent="Scenario"]
+position = Vector2(158, 103)
+rotation = 0.7407915
+scale = Vector2(1.071, 0.72699994)
+texture = ExtResource("2_nijp8")
+
+[node name="Sprite10" type="Sprite2D" parent="Scenario"]
+position = Vector2(40, 85.00001)
+rotation = -0.12355435
+scale = Vector2(1.071, 0.727)
+texture = ExtResource("2_nijp8")
+
+[node name="Sprite11" type="Sprite2D" parent="Scenario"]
+position = Vector2(-94, 128)
+rotation = -0.12355436
+scale = Vector2(1.324367, 0.78944427)
+texture = ExtResource("2_nijp8")
+
+[node name="Structures" type="Node2D" parent="."]
+
+[node name="Portal" parent="." instance=ExtResource("3_v6j6d")]
+position = Vector2(-192, 188)
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -245.0
+offset_top = 34.0
+offset_right = -129.0
+offset_bottom = 115.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = -21.0
+offset_top = 1.0
+offset_right = 132.0
+offset_bottom = 21.0
+text = "Movement controls"
+
+[node name="Label2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 18.0
+offset_right = 95.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 12
+text = "Move left -> W"
+
+[node name="Label3" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 33.0
+offset_right = 93.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 12
+text = "Move left -> A"
+
+[node name="Label4" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 50.0
+offset_right = 93.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 12
+text = "Move left -> S"
+
+[node name="Label5" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 66.0
+offset_right = 93.0
+offset_bottom = 82.0
+theme_override_font_sizes/font_size = 12
+text = "Move left -> D"
+
+[node name="Control2" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -119.0
+offset_top = 72.0
+offset_right = 54.0
+offset_bottom = 139.0
+
+[node name="Label" type="Label" parent="Control2"]
+layout_mode = 0
+offset_left = 30.0
+offset_right = 162.0
+offset_bottom = 20.0
+text = "Actions controls"
+
+[node name="Label2" type="Label" parent="Control2"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 18.0
+offset_right = 95.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 12
+text = "Shot -> Mouse Button Left"
+
+[node name="Label3" type="Label" parent="Control2"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 33.0
+offset_right = 93.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 12
+text = "Level Up Menu -> Q"
+
+[node name="Label4" type="Label" parent="Control2"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 50.0
+offset_right = 93.0
+offset_bottom = 70.0
+theme_override_font_sizes/font_size = 12
+text = "Collect -> E"
+
+[node name="Control3" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 75.0
+offset_top = 60.0
+offset_right = 248.0
+offset_bottom = 99.0
+
+[node name="Label" type="Label" parent="Control3"]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 1.0
+offset_right = 100.0
+offset_bottom = 21.0
+text = "Note"
+
+[node name="Label2" type="Label" parent="Control3"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 18.0
+offset_right = 95.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 12
+text = "You can have only a book"
+
+[node name="VisibilityTrigger" parent="." node_paths=PackedStringArray("node") instance=ExtResource("4_vi55c")]
+position = Vector2(-201, 184)
+node = NodePath("../Control")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisibilityTrigger"]
+position = Vector2(8.5, 4)
+shape = SubResource("RectangleShape2D_dj27v")
+
+[node name="VisibilityTrigger2" parent="." node_paths=PackedStringArray("node") instance=ExtResource("4_vi55c")]
+position = Vector2(-40, 183)
+node = NodePath("../Control2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisibilityTrigger2"]
+position = Vector2(12.5, 4)
+shape = SubResource("RectangleShape2D_7bfrq")
+
+[node name="VisibilityTrigger3" parent="." node_paths=PackedStringArray("node", "node2") instance=ExtResource("4_vi55c")]
+position = Vector2(163, 150)
+node = NodePath("../PhysicItem")
+node2 = NodePath("../Control3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisibilityTrigger3"]
+position = Vector2(-5, -8.5)
+shape = SubResource("RectangleShape2D_0gilg")
+
+[node name="VisibilityTrigger4" parent="." node_paths=PackedStringArray("node") instance=ExtResource("4_vi55c")]
+position = Vector2(273, 69)
+node = NodePath("../Portal2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VisibilityTrigger4"]
+shape = SubResource("RectangleShape2D_2s84e")
+
+[node name="PhysicItem" parent="." instance=ExtResource("5_0gilg")]
+position = Vector2(168, 110)
+item = ExtResource("6_2s84e")
+
+[node name="Portal2" parent="." instance=ExtResource("7_2s84e")]
+visible = false
+position = Vector2(258, 20)

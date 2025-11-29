@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://fw18nvwmahhc"]
+
+[ext_resource type="Script" uid="uid://d3ifpemcx4rbq" path="res://items/item.gd" id="1_i3ooi"]
+[ext_resource type="Texture2D" uid="uid://2ygbnsh87wss" path="res://assets/upgrades/upgrade5.png" id="1_laihg"]
+
+[resource]
+script = ExtResource("1_i3ooi")
+item_name = "Upgrade5"
+item_image = ExtResource("1_laihg")
+item_type = "upgrade"

@@ -10,12 +10,12 @@ func _on_button_up() -> void:
 		control.current_save_slot = self
 		control.show_difficulty_selection()
 	else:
-		get_tree().change_scene_to_file("res://maps/main_map/main_map.tscn")
+		get_tree().change_scene_to_file("res://game/game.tscn")
 
 func create_save():
 	DataManagement.data_dictionary.difficulty = control.get_new_save_difficulty()
 	DataManagement.create_session_save(save_slot_number)
-	get_tree().change_scene_to_file("res://maps/main_map/main_map.tscn")
+	get_tree().change_scene_to_file("res://game/game.tscn")
 
 func _ready() -> void:
 	var session_data = DataManagement.get_session_data(save_slot_number)

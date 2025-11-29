@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://f3jla6krre0h"]
+
+[ext_resource type="Script" uid="uid://bp5x7v4g2jqek" path="res://visibility_triger/visibility_triger.gd" id="1_1v75d"]
+
+[node name="VisibilityTrigger" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_1v75d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

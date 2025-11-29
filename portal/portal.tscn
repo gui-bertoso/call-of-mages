@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=3 uid="uid://cuc61fbi2dr0g"]
+
+[ext_resource type="Script" uid="uid://elr8ywkrlua" path="res://portal/portal.gd" id="1_sfjos"]
+
+[sub_resource type="Curve" id="Curve_hvpx0"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.15953314), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_sfjos"]
+offsets = PackedFloat32Array(0, 0, 1)
+colors = PackedColorArray(1, 0, 1, 1, 0.45490196, 0, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_sfjos"]
+resource_name = "spawn"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.8666668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(39.87, 39.87), Vector2(1.5, 1.5)]
+}
+
+[sub_resource type="Animation" id="Animation_508n2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera2D:enabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(39.87, 39.87)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x3c8y"]
+_data = {
+&"RESET": SubResource("Animation_508n2"),
+&"spawn": SubResource("Animation_sfjos")
+}
+
+[node name="Portal" type="Node2D"]
+script = ExtResource("1_sfjos")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 64
+randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 26.65
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 396.3
+initial_velocity_max = 397.1
+orbit_velocity_min = 26.45
+orbit_velocity_max = 52.25
+scale_amount_min = 9.65
+scale_amount_max = 13.9
+scale_amount_curve = SubResource("Curve_hvpx0")
+color_ramp = SubResource("Gradient_sfjos")
+anim_speed_min = 64.85
+anim_speed_max = 120.3
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(39.87, 39.87)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_x3c8y")
+}
+autoplay = "spawn"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]

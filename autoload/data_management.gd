@@ -19,7 +19,9 @@ var data_dictionary: Dictionary = {
 	"save_progress_state": 0,
 	"played_time": 0.0,
 	"difficulty": 1,
-	"first_run": true
+	"first_run": true,
+	
+	"current_sland": -1
 }
 
 var settings_dictionary = {}
