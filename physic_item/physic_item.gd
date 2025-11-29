@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var book: BookData = null
+@export var book: ItemData = null
 var can_collect: bool = false
 
 func _ready() -> void:

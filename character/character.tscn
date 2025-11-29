@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b04ts5bfef10d" path="res://assets/VFX/shadow.png" id="1_pjt0s"]
 [ext_resource type="Script" uid="uid://b6fuhfgkv86e" path="res://character/character.gd" id="1_wa5vi"]
 [ext_resource type="Texture2D" uid="uid://bty4dw625dtav" path="res://assets/character/character_sheet.png" id="3_wfnr8"]
-[ext_resource type="Script" uid="uid://b0tvp2wb1mekx" path="res://maps/main_map/main_map.gd" id="4_wfnr8"]
+[ext_resource type="Script" uid="uid://b0tvp2wb1mekx" path="res://character/character_camera.gd" id="4_wfnr8"]
 
 [sub_resource type="Animation" id="Animation_0qfo5"]
 length = 0.001
@@ -129,7 +129,7 @@ rotation = -1.5664535
 shape = SubResource("CapsuleShape2D_wa5vi")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.505, 1.505)
+zoom = Vector2(1.8, 1.8)
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 

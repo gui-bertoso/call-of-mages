@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgh0qie1j22h0"]
+
+[ext_resource type="Script" uid="uid://bqc5dwkkupra2" path="res://game/game.gd" id="1_4fuuu"]
+[ext_resource type="Script" uid="uid://cgq2rxv4w40kn" path="res://debug/fps_label.gd" id="2_dakft"]
+[ext_resource type="PackedScene" uid="uid://c7vxd57kxtseg" path="res://hud/hud.tscn" id="4_y36n6"]
+[ext_resource type="PackedScene" uid="uid://dvj7r5lan43fn" path="res://character/character.tscn" id="5_l8g03"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_4fuuu")
+
+[node name="Parallax2D" type="CanvasLayer" parent="."]
+layer = -1
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
+
+[node name="ColorRect" type="ColorRect" parent="Parallax2D"]
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0885599, 0.0885599, 0.0885599, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 59.0
+offset_bottom = 34.0
+theme_override_font_sizes/font_size = 32
+text = "99999"
+script = ExtResource("2_dakft")
+metadata/_edit_use_anchors_ = true
+
+[node name="CurrentSland" type="Node2D" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource("4_y36n6")]
+
+[node name="Character" parent="." instance=ExtResource("5_l8g03")]

@@ -1,6 +1,7 @@
 extends HBoxContainer
 
 func populate_souls():
+	if not Globals.character: return
 	for i in get_children():
 		i.queue_free()
 	
