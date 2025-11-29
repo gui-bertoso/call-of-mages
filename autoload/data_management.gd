@@ -2,7 +2,9 @@ extends Node
 
 var save_folder_path: String = "user://CallOfMages"
 
-var data_dictionary = {
+var current_session_number = 0
+
+var data_dictionary: Dictionary = {
 	"player_position": Vector2(0, 0),
 	"player_level": 0,
 	"player_experience": 0,
@@ -15,7 +17,7 @@ var data_dictionary = {
 	"player_level_up_points": 0,
 	
 	"save_progress_state": 0,
-	"time_played": 0,
+	"played_time": 0.0,
 	"difficulty": 1,
 	"first_run": true
 }
@@ -31,20 +33,40 @@ func save_data():
 	file0.close()
 	
 	var file1 = FileAccess.open(save_folder_path + "/config.save", FileAccess.WRITE)
-	file1.store_var(data_dictionary)
+	file1.store_var(settings_dictionary)
 	file1.close()
 
 func load_data():
 	pass
 
-func get_session_data(save_slot: int):
+func get_session_data(save_slot: int) -> Dictionary:
+	current_session_number = save_slot
 	if FileAccess.file_exists(DataManagement.save_folder_path + "/session" + str(save_slot) + ".save"):
 		var file = FileAccess.open(DataManagement.save_folder_path + "/session" + str(save_slot) + ".save", FileAccess.READ)
 		var data = file.get_var()
-		return data
-	return null
+		print("GETED DATA:" + str(data))
+		data_dictionary = data
+		return data_dictionary
+	return {}
 
 func create_session_save(save_slot: int):
+	current_session_number = save_slot
 	var file = FileAccess.open(DataManagement.save_folder_path + "/session" + str(save_slot) + ".save", FileAccess.WRITE)
 	file.store_var(data_dictionary)
+	print("STORAD DATA:" + str(data_dictionary))
 	file.close()
+
+func save_session_data():
+	var file = FileAccess.open(DataManagement.save_folder_path + "/session" + str(current_session_number) + ".save", FileAccess.WRITE)
+	file.store_var(data_dictionary)
+	print("STORAD DATA:" + str(data_dictionary))
+	file.close()
+
+func delete_session_save(save_slot: int):
+	DirAccess.remove_absolute(DataManagement.save_folder_path + "/session" + str(save_slot) + ".save")
+
+func _enter_tree() -> void:
+	load_data()
+
+func _exit_tree() -> void:
+	save_data()

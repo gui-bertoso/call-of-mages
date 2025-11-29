@@ -50,20 +50,24 @@ offset_top = 156.0
 offset_right = 921.0
 offset_bottom = 568.0
 
-[node name="ColorRect" parent="VBoxContainer" instance=ExtResource("2_0ohk8")]
+[node name="ColorRect" parent="VBoxContainer" node_paths=PackedStringArray("control") instance=ExtResource("2_0ohk8")]
 layout_mode = 2
+control = NodePath("../..")
 
-[node name="ColorRect2" parent="VBoxContainer" instance=ExtResource("2_0ohk8")]
+[node name="ColorRect2" parent="VBoxContainer" node_paths=PackedStringArray("control") instance=ExtResource("2_0ohk8")]
 layout_mode = 2
 save_slot_number = 1
+control = NodePath("../..")
 
-[node name="ColorRect3" parent="VBoxContainer" instance=ExtResource("2_0ohk8")]
+[node name="ColorRect3" parent="VBoxContainer" node_paths=PackedStringArray("control") instance=ExtResource("2_0ohk8")]
 layout_mode = 2
 save_slot_number = 2
+control = NodePath("../..")
 
-[node name="ColorRect4" parent="VBoxContainer" instance=ExtResource("2_0ohk8")]
+[node name="ColorRect4" parent="VBoxContainer" node_paths=PackedStringArray("control") instance=ExtResource("2_0ohk8")]
 layout_mode = 2
 save_slot_number = 3
+control = NodePath("../..")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -106,4 +110,65 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_tdby5")
 text = "Back"
 alignment = 0
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 146.0
+offset_top = 87.0
+offset_right = 921.0
+offset_bottom = 568.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect2"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -123.5
+offset_top = 140.0
+offset_right = 123.5
+offset_bottom = 179.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 32
+text = "Select difficulty"
+
+[node name="VBoxContainer" type="HBoxContainer" parent="ColorRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.5
+offset_top = -23.5
+offset_right = 248.5
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 19
+
+[node name="Button" type="Button" parent="ColorRect2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Easy"
+
+[node name="Button2" type="Button" parent="ColorRect2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Normal"
+
+[node name="Button3" type="Button" parent="ColorRect2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Hard"
+
+[node name="Button4" type="Button" parent="ColorRect2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Hardcore"
+
 [connection signal="button_up" from="Button2" to="." method="_on_back_button_up"]
+[connection signal="button_up" from="ColorRect2/VBoxContainer/Button" to="." method="_on_easy_button_up"]
+[connection signal="button_up" from="ColorRect2/VBoxContainer/Button2" to="." method="_on_normal_button_up"]
+[connection signal="button_up" from="ColorRect2/VBoxContainer/Button3" to="." method="_on_hard_button_up"]
+[connection signal="button_up" from="ColorRect2/VBoxContainer/Button4" to="." method="_on_hardcore_button_up"]

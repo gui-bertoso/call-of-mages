@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1cji5a38lv0c"]
+
+[ext_resource type="Script" uid="uid://b241coykac5d7" path="res://base_sland/base_sland.gd" id="1_2bgt8"]
+[ext_resource type="Texture2D" uid="uid://ci0rnlwgg53vd" path="res://assets/levels/sprite3.png" id="2_2bgt8"]
+
+[node name="Sland" type="Node2D"]
+script = ExtResource("1_2bgt8")
+
+[node name="Scenario" type="CanvasGroup" parent="."]
+
+[node name="Sprite3" type="Sprite2D" parent="Scenario"]
+position = Vector2(47.717712, 171.3815)
+scale = Vector2(1.071, 0.727)
+texture = ExtResource("2_2bgt8")
+
+[node name="Sprite4" type="Sprite2D" parent="Scenario"]
+position = Vector2(-166.69719, -77.000854)
+rotation = -0.55003613
+scale = Vector2(1.3328867, 0.7950734)
+texture = ExtResource("2_2bgt8")
+
+[node name="Sprite5" type="Sprite2D" parent="Scenario"]
+position = Vector2(145.71771, 4.3815002)
+scale = Vector2(1.071, 0.727)
+texture = ExtResource("2_2bgt8")
+
+[node name="Sprite6" type="Sprite2D" parent="Scenario"]
+position = Vector2(-154.28229, 108.541534)
+scale = Vector2(1.071, 0.96975)
+texture = ExtResource("2_2bgt8")
+
+[node name="Sprite7" type="Sprite2D" parent="Scenario"]
+position = Vector2(-73.28232, 136.38162)
+rotation = 2.1192796
+scale = Vector2(1.071, 0.72700006)
+texture = ExtResource("2_2bgt8")
+
+[node name="Sprite8" type="Sprite2D" parent="Scenario"]
+position = Vector2(203.10825, 85.967255)
+rotation = 2.1192796
+scale = Vector2(0.9274482, 0.70442104)
+texture = ExtResource("2_2bgt8")
+
+[node name="Sprite9" type="Sprite2D" parent="Scenario"]
+position = Vector2(202.71765, -77.6185)
+rotation = 0.7407915
+scale = Vector2(1.071, 0.72699994)
+texture = ExtResource("2_2bgt8")
+
+[node name="Sprite10" type="Sprite2D" parent="Scenario"]
+position = Vector2(12.717743, -60.61847)
+rotation = -0.12355435
+scale = Vector2(1.071, 0.727)
+texture = ExtResource("2_2bgt8")
+
+[node name="Sprite11" type="Sprite2D" parent="Scenario"]
+position = Vector2(0, -144)
+rotation = -0.12355436
+scale = Vector2(1.324367, 0.78944427)
+texture = ExtResource("2_2bgt8")
+
+[node name="Structures" type="Node2D" parent="."]
+
+[node name="Enemys" type="Node2D" parent="."]

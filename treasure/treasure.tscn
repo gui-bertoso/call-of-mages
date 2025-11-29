@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bouaiplifjo5d"]
+
+[ext_resource type="Script" uid="uid://b6c48tf3jewmo" path="res://treasure/treasure.gd" id="1_12f8a"]
+[ext_resource type="Texture2D" uid="uid://xmmp1esrpe7m" path="res://assets/structures/treasure.png" id="1_rvv4y"]
+[ext_resource type="PackedScene" uid="uid://bm0ypugv4foyd" path="res://physic_item/physic_item.tscn" id="2_12f8a"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_12f8a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rvv4y")
+
+[node name="PhysicItem" parent="." instance=ExtResource("2_12f8a")]
+position = Vector2(-1, -6)
