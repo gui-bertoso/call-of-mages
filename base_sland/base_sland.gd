@@ -40,6 +40,8 @@ func _process(delta: float) -> void:
 				sland_complete()
 
 func set_sland() -> void:
+	spawn_entry_portal()
+	print("YOU SLAND IS: " + sland_type)
 	match sland_type:
 		"Trial":
 			set_sland_scale()
@@ -55,7 +57,6 @@ func set_sland() -> void:
 		"Store":
 			spawn_store()
 			sland_complete()
-	spawn_entry_portal()
 	clear_markers()
 	set_sland_scale()
 
@@ -65,6 +66,7 @@ func spawn_campfire():
 	new_campfire.global_position = campfire_marker.global_position
 	$Structures.add_child(new_campfire)
 	global_position = new_campfire.global_position
+	print("IS CAMPFIRE")
 
 func spawn_treasure():
 	var treasure_marker: Marker2D = $Markers/TreasureMarkes.get_child(randi_range(0, $Markers/TreasureMarkes.get_child_count()-1))
@@ -72,6 +74,7 @@ func spawn_treasure():
 	new_treasure.global_position = treasure_marker.global_position
 	$Structures.add_child(new_treasure)
 	global_position = new_treasure.global_position
+	print("IS treasure")
 
 func spawn_store():
 	var store_marker: Marker2D = $Markers/StoreMarkers.get_child(randi_range(0, $Markers/StoreMarkers.get_child_count()-1))
@@ -79,6 +82,7 @@ func spawn_store():
 	new_store.global_position = store_marker.global_position
 	$Structures.add_child(store_marker)
 	global_position = store_marker.global_position
+	print("IS store")
 	
 func spawn_entry_portal():
 	var portal_marker: Marker2D = $Markers/EntryMarkers.get_child(randi_range(0, $Markers/EntryMarkers.get_child_count()-1))
@@ -86,6 +90,7 @@ func spawn_entry_portal():
 	new_portal.global_position = portal_marker.global_position
 	add_child(new_portal)
 	global_position = portal_marker.global_position
+	print("IS entry")
 	
 func spawn_exit_portal():
 	var portal_marker: Marker2D = $Markers/ExitMarkers.get_child(randi_range(0, $Markers/ExitMarkers.get_child_count()-1))
@@ -95,6 +100,7 @@ func spawn_exit_portal():
 	global_position = portal_marker.global_position
 	exit_portal = new_portal
 	exit_portal.hide()
+	print("IS exit")
 
 func spawn_enemys():
 	for i in randi_range(1, 3):

@@ -13,7 +13,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if can_collect:
 		if Input.is_action_just_pressed("action_collect"):
-			Globals.character.equip_book(item.book_scene)
+			Globals.character.equip_book(item.item_scene)
 			queue_free()
 
 func _on_body_entered(_body: Node2D) -> void:

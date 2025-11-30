@@ -178,13 +178,12 @@ theme_override_font_sizes/font_size = 12
 text = "Collect -> E"
 
 [node name="Control3" type="Control" parent="."]
-visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_left = 75.0
-offset_top = 60.0
-offset_right = 248.0
-offset_bottom = 99.0
+offset_left = 74.0
+offset_top = 39.0
+offset_right = 247.0
+offset_bottom = 78.0
 
 [node name="Label" type="Label" parent="Control3"]
 layout_mode = 0
@@ -219,10 +218,9 @@ node = NodePath("../Control2")
 position = Vector2(12.5, 4)
 shape = SubResource("RectangleShape2D_7bfrq")
 
-[node name="VisibilityTrigger3" parent="." node_paths=PackedStringArray("node", "node2") instance=ExtResource("4_vi55c")]
+[node name="VisibilityTrigger3" parent="." node_paths=PackedStringArray("node") instance=ExtResource("4_vi55c")]
 position = Vector2(163, 150)
-node = NodePath("../PhysicItem")
-node2 = NodePath("../Control3")
+node = NodePath("../Control3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="VisibilityTrigger3"]
 position = Vector2(-5, -8.5)

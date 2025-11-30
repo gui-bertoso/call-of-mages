@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://36ohh1vml3qd"]
+[gd_scene load_steps=5 format=3 uid="uid://36ohh1vml3qd"]
 
 [ext_resource type="Script" uid="uid://ck6on0a0i3i3" path="res://exit_portal/exit_portal.gd" id="1_jc1hx"]
 
@@ -9,19 +9,6 @@ point_count = 2
 [sub_resource type="Gradient" id="Gradient_sfjos"]
 offsets = PackedFloat32Array(0, 0, 1)
 colors = PackedColorArray(1, 0, 1, 1, 0.45490196, 0, 1, 1, 1, 1, 1, 1)
-
-[sub_resource type="Animation" id="Animation_508n2"]
-length = 0.001
-
-[sub_resource type="Animation" id="Animation_sfjos"]
-resource_name = "spawn"
-length = 2.0
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_x3c8y"]
-_data = {
-&"RESET": SubResource("Animation_508n2"),
-&"spawn": SubResource("Animation_sfjos")
-}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jc1hx"]
 radius = 23.0
@@ -47,12 +34,6 @@ color_ramp = SubResource("Gradient_sfjos")
 anim_speed_min = 64.85
 anim_speed_max = 120.3
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_x3c8y")
-}
-autoplay = "spawn"
-
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 4
@@ -61,5 +42,4 @@ collision_mask = 4
 position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_jc1hx")
 
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]
