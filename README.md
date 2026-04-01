@@ -1,10 +1,10 @@
-# 🔮 call of mages
+# call of mages
 
 game prototype focused on magic systems and combat mechanics.
 
 ---
 
-## 🚀 features
+## features
 
 - spell-based combat  
 - gameplay experimentation  
@@ -12,19 +12,19 @@ game prototype focused on magic systems and combat mechanics.
 
 ---
 
-## 🎯 goal
+## goal
 
 explore combat design and ability systems.
 
 ---
 
-## ⚙️ stack
+## stack
 
 - godot
 - gameplay systems
 
 ---
 
-## 📌 status
+## status
 
 prototype
