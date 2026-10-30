@@ -55,13 +55,13 @@ func create_session_save(save_slot: int):
 	current_session_number = save_slot
 	var file = FileAccess.open(DataManagement.save_folder_path + "/session" + str(save_slot) + ".save", FileAccess.WRITE)
 	file.store_var(data_dictionary)
-	print("STORAD DATA:" + str(data_dictionary))
+	print("STORED DATA:" + str(data_dictionary))
 	file.close()
 
 func save_session_data():
 	var file = FileAccess.open(DataManagement.save_folder_path + "/session" + str(current_session_number) + ".save", FileAccess.WRITE)
 	file.store_var(data_dictionary)
-	print("STORAD DATA:" + str(data_dictionary))
+	print("STORED DATA:" + str(data_dictionary))
 	file.close()
 
 func delete_session_save(save_slot: int):

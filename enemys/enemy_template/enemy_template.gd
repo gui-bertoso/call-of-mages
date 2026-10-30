@@ -44,7 +44,7 @@ func _on_area_2d_2_area_entered(area: Area2D) -> void:
 	a.global_position = $Marker2D.global_position
 	$Sprite2D/AnimationPlayer.play("hit_effect")
 	
-	print("no negocio de contato fisico")
+	print("in the business of physical contact")
 	print("AAA: " + str(area.get_parent().effect_scene))
 	if area.get_parent().effect_scene != null:
 		add_effect(area.get_parent().effect_scene.duplicate())
