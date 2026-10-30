@@ -28,3 +28,7 @@ explore combat design and ability systems.
 ## status
 
 prototype
+
+## License
+
+The author's code uses the [MIT License](LICENSE). Third-party materials retain their original licenses.
